@@ -1,0 +1,125 @@
+{
+  "v": 1,
+  "assets": {
+    "logo": "img/logo.png",
+    "machine": "img/hero.webp"
+  },
+  "settings": {
+    "phone": "+998 92 027 82 68",
+    "telegram": "",
+    "whatsapp": false,
+    "instagram": "lioxpower.uz",
+    "address": "Toshkent, Namunali uylar ko‘chasi",
+    "delivery": "Toshkent bo‘ylab bepul"
+  },
+  "payments": [
+    {
+      "id": "cash",
+      "name": "Naqd pul",
+      "desc": "Yetkazib berilganda yoki ofisda",
+      "who": "fiz",
+      "icon": "cash",
+      "on": true
+    },
+    {
+      "id": "card",
+      "name": "Plastik karta",
+      "desc": "Uzcard yoki Humo, terminal orqali",
+      "who": "all",
+      "icon": "card",
+      "on": true
+    },
+    {
+      "id": "click",
+      "name": "Click",
+      "desc": "To‘lov ma’lumotini menejer yuboradi",
+      "who": "fiz",
+      "icon": "phone",
+      "on": true
+    },
+    {
+      "id": "payme",
+      "name": "Payme",
+      "desc": "To‘lov ma’lumotini menejer yuboradi",
+      "who": "fiz",
+      "icon": "wallet",
+      "on": true
+    },
+    {
+      "id": "bank",
+      "name": "Bank o‘tkazmasi",
+      "desc": "Shartnoma asosida, korxona hisobidan",
+      "who": "yur",
+      "icon": "bank",
+      "on": true
+    }
+  ],
+  "products": [
+    {
+      "id": "p30",
+      "name": "LIOX 37,5 kVA",
+      "kva": 37.5,
+      "model": "GFC-38R",
+      "price": 0,
+      "stock": "bor",
+      "use": "Do‘kon, kafe, xonadon",
+      "img": "img/m30.jpg",
+      "specs": "Chastota: 50 Hz\nKuchlanish: 400/230 V\nFazalar: 3\nOg‘irligi: 875 kg\nKorpus: Super Silent"
+    },
+    {
+      "id": "p40",
+      "name": "LIOX 50 kVA",
+      "kva": 50,
+      "model": "",
+      "price": 0,
+      "stock": "bor",
+      "use": "Katta do‘kon, ofis",
+      "img": "img/m40.jpg",
+      "specs": "Korpus: shovqin pasaytiruvchi"
+    },
+    {
+      "id": "p50",
+      "name": "LIOX 62,5 kVA",
+      "kva": 62.5,
+      "model": "",
+      "price": 0,
+      "stock": "bor",
+      "use": "Restoran, kichik ishlab chiqarish",
+      "img": "img/m50.jpg",
+      "specs": "Korpus: shovqin pasaytiruvchi"
+    },
+    {
+      "id": "p150",
+      "name": "LIOX 187,5 kVA",
+      "kva": 187.5,
+      "model": "GFC-188R",
+      "price": 0,
+      "stock": "bor",
+      "use": "Sex, savdo markazi",
+      "img": "img/m150.jpg",
+      "specs": "Korpus: shovqin pasaytiruvchi"
+    },
+    {
+      "id": "p200",
+      "name": "LIOX 250 kVA",
+      "kva": 250,
+      "model": "",
+      "price": 0,
+      "stock": "bor",
+      "use": "Zavod, qurilish maydoni",
+      "img": "img/m200.jpg",
+      "specs": "Korpus: shovqin pasaytiruvchi"
+    },
+    {
+      "id": "p300",
+      "name": "LIOX 375 kVA",
+      "kva": 375,
+      "model": "",
+      "price": 0,
+      "stock": "bor",
+      "use": "Yirik korxona, ombor",
+      "img": "img/m300.jpg",
+      "specs": "Korpus: shovqin pasaytiruvchi"
+    }
+  ]
+}

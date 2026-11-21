@@ -279,7 +279,9 @@ button:disabled{cursor:default;opacity:.45}
 .cta-img{max-width:720px;margin:clamp(36px,5vw,60px) auto 0;filter:drop-shadow(0 30px 30px rgba(0,0,0,.45))}
 .ftr{background:var(--nv2);color:#C9D6FF;padding:24px max(5vw,16px);font-size:13px}
 .ftr .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between;align-items:center}
-.adm-link{border:0;background:none;color:inherit;text-decoration:underline;min-height:44px;padding:0;font-size:13px}
+.adm-link{border:1.5px solid rgba(157,184,255,.6);background:rgba(255,255,255,.06);color:#fff;border-radius:999px;min-height:44px;padding:0 18px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.adm-link:hover{background:rgba(255,255,255,.14)}
+.adm-note .adm-link{border:0;background:none;color:inherit;padding:0;min-height:0;text-decoration:underline}
 .adm-note{margin:12px 20px 0;padding:10px 14px;border-radius:10px;background:#FFF4E5;color:#8A3B00;font-size:15px}
 /* order card + admin */
 .ov{position:fixed;inset:0;background:rgba(29,29,31,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);z-index:50;display:flex;align-items:center;justify-content:center;padding:16px}
@@ -688,7 +690,7 @@ const contact = () => {
     (m ? '<img class="cta-img rv" src="' + m + '" alt="LIOX Power dizel generatori" loading="lazy">' : '') + '</div></section>';
 };
 
-const footer = () => '<footer class="ftr"><div class="wrap"><span>© ' + new Date().getFullYear() + ' LIOX Power · Generator bozor</span><span>' + esc(S.settings.address) + ' · ' + esc(S.settings.phone) + '</span><button type="button" class="adm-link" data-act="admin">Admin panel</button></div></footer>';
+const footer = () => '<footer class="ftr"><div class="wrap"><span>© ' + new Date().getFullYear() + ' LIOX Power · Generator bozor</span><span>' + esc(S.settings.address) + ' · ' + esc(S.settings.phone) + '</span><button type="button" class="adm-link" data-act="admin">' + ic('edit', 16) + 'Admin panel</button></div></footer>';
 
 const app = document.getElementById('app');
 const render = () => {

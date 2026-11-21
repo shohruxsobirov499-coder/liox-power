@@ -65,18 +65,29 @@
       "stock": "bor",
       "use": "Do‘kon, kafe, xonadon",
       "img": "img/m30.jpg",
-      "specs": "Chastota: 50 Hz\nKuchlanish: 400/230 V\nFazalar: 3\nOg‘irligi: 875 kg\nKorpus: Super Silent"
+      "specs": "Chastota: 50 Hz\nKuchlanish: 400/230 V\nFazalar: 3\nOg‘irligi: 875 kg\nKorpus: Super Silent",
+      "gallery": [
+        "img/g30-1.jpg"
+      ]
     },
     {
       "id": "p40",
       "name": "LIOX 50 kVA",
       "kva": 50,
-      "model": "",
+      "model": "GFC-50R",
       "price": 0,
       "stock": "bor",
       "use": "Katta do‘kon, ofis",
-      "img": "img/m40.jpg",
-      "specs": "Korpus: shovqin pasaytiruvchi"
+      "img": "img/m40-new.jpg",
+      "specs": "Chastota: 50 Hz\nKuchlanish: 400/230 V\nTok: 72 A\nAylanish: 1500 ayl/min\nFazalar: 3\nOg‘irligi: 915 kg\nKorpus: Super Silent",
+      "gallery": [
+        "img/g40-1.jpg",
+        "img/g40-2.jpg",
+        "img/g40-3.jpg",
+        "img/g40-4.jpg",
+        "img/g40-5.jpg",
+        "img/m40.jpg"
+      ]
     },
     {
       "id": "p50",
@@ -87,6 +98,23 @@
       "stock": "bor",
       "use": "Restoran, kichik ishlab chiqarish",
       "img": "img/m50.jpg",
+      "specs": "Korpus: shovqin pasaytiruvchi",
+      "gallery": [
+        "img/g50-1.jpg"
+      ]
+    },
+    {
+      "id": "p100",
+      "name": "LIOX 125 kVA",
+      "kva": 125,
+      "model": "",
+      "price": 0,
+      "stock": "bor",
+      "use": "Supermarket, kichik sex",
+      "img": "img/g100-1.jpg",
+      "gallery": [
+        "img/g100-2.jpg"
+      ],
       "specs": "Korpus: shovqin pasaytiruvchi"
     },
     {
@@ -98,7 +126,10 @@
       "stock": "bor",
       "use": "Sex, savdo markazi",
       "img": "img/m150.jpg",
-      "specs": "Korpus: shovqin pasaytiruvchi"
+      "specs": "Korpus: shovqin pasaytiruvchi",
+      "gallery": [
+        "img/g150-1.jpg"
+      ]
     },
     {
       "id": "p200",
@@ -109,7 +140,10 @@
       "stock": "bor",
       "use": "Zavod, qurilish maydoni",
       "img": "img/m200.jpg",
-      "specs": "Korpus: shovqin pasaytiruvchi"
+      "specs": "Korpus: shovqin pasaytiruvchi",
+      "gallery": [
+        "img/g200-1.jpg"
+      ]
     },
     {
       "id": "p300",
@@ -119,8 +153,14 @@
       "price": 0,
       "stock": "bor",
       "use": "Yirik korxona, ombor",
-      "img": "img/m300.jpg",
-      "specs": "Korpus: shovqin pasaytiruvchi"
+      "img": "img/m300-new.jpg",
+      "specs": "Korpus: shovqin pasaytiruvchi",
+      "gallery": [
+        "img/g300-1.jpg",
+        "img/g300-2.jpg",
+        "img/g300-3.jpg",
+        "img/m300.jpg"
+      ]
     }
   ]
 }

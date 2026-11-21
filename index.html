@@ -3,187 +3,244 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LIOX Power — dizel generatorlar katalogi</title>
-<meta name="description" content="LIOX Power dizel generatorlari: 37,5 dan 375 kVA gacha. Katalog, buyurtma kartasi, jismoniy va yuridik shaxslar uchun to‘lov turlari. Toshkent, +998 92 027 82 68.">
-<meta property="og:title" content="LIOX Power — dizel generatorlar katalogi">
-<meta property="og:description" content="Quvvatni tanlang, buyurtmani bitta kartada bering. Toshkent bo‘ylab bepul yetkazish.">
+<title>LIOX Power — dizel generatorlar</title>
+<meta name="description" content="LIOX Power dizel generatorlari: 30 dan 3000 kVt gacha. Super Silent korpus, ATS, ISO 9001 va CE. Katalog, buyurtma kartasi, jismoniy va yuridik shaxslar uchun to‘lov. Toshkent, +998 92 027 82 68.">
+<meta property="og:title" content="LIOX Power — Tok o‘chadi. Ish to‘xtamaydi.">
+<meta property="og:description" content="Dizel generatorlar 30 dan 3000 kVt gacha. Toshkent bo‘ylab bepul yetkazish.">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="preload" as="image" href="img/hero-gen.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style id="app-css">
-/* VOICE  occasion: a manufacturer's catalogue that reads like an industrial infographic
-   IDEA   the yellow canopy and its nameplate; the catalogue is a power scale you can press
-   PICTURE hero bar chart, one bar per generator at true kVA scale, each opening its order card
-   COLOUR canopy yellow #FFC20E ground, graphite #2A2D33 bars, LIOX blue #1B2DB0, orange focus
-   TYPE   Archivo expanded 800 + Inter
-   LAYOUT title row over a full-width chart; catalogue grid; payment split; phone stacks */
-:root{color-scheme:light;--y:#FFC20E;--y2:#FFD24D;--ink:#17181C;--g:#2A2D33;--b:#1B2DB0;--b2:#121E80;--bt:#EEF0FF;--o:#F26A1B;--mut:#4F5664;--line:#DDE1E6;--soft:#F1F2F4;--bg:#FFFFFF;--red:#B42318}
+/* VOICE  occasion: a premium product page in the manner of Apple, in LIOX logo colours
+   IDEA   the machine presented like a flagship device: big cut-out, scroll-told features, real footage
+   PICTURE hero generator that rises and grows on scroll; blackout story video; sticky "inside" tour
+   COLOUR white and Apple grey #F5F5F7 grounds, ink #1D1D1F, LIOX blue #1B2DB0 lead, logo orange #F26A1B accent
+   TYPE   Inter 800 tight for display, Inter for text
+   LAYOUT centred headlines over full-width pictures; alternating white/grey bands; phone stacks */
+:root{color-scheme:light;--bg:#FFFFFF;--alt:#F5F5F7;--ink:#1D1D1F;--mut:#6E6E73;--b:#1B2DB0;--b2:#14228C;--bt:#EEF0FF;--o:#F26A1B;--o2:#B8470A;--line:#E3E3E8;--soft:#F5F5F7;--y:#1B2DB0;--y2:#14228C;--g:#2A2D33;--red:#B42318;--r:28px}
 *{box-sizing:border-box;min-width:0}
-html{scroll-padding-top:84px;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.disp{font-family:Archivo,Inter,system-ui,sans-serif;font-stretch:125%;letter-spacing:-.02em;line-height:1.05;margin:0}
-h2{font-size:clamp(28px,3.4vw,44px);font-weight:800;text-wrap:balance}
-h3{font-weight:800}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:Inter,system-ui,-apple-system,sans-serif;font-weight:800;letter-spacing:-.035em;line-height:1.05;margin:0}
 h4{margin:0 0 10px;font-size:15px;color:var(--mut);font-weight:600}
 a{color:var(--b)}
-img{max-width:100%;display:block}
+img,video{max-width:100%;display:block}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
 button:disabled{cursor:default;opacity:.45}
-:focus-visible{outline:3px solid var(--o);outline-offset:2px}
+:focus-visible{outline:3px solid var(--o);outline-offset:3px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .wrap{max-width:1240px;margin:0 auto}
-.band{padding:clamp(44px,6vw,88px) max(5vw,16px)}
-.soft{background:var(--soft)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border-radius:10px;border:2px solid transparent;font-weight:700;text-decoration:none;white-space:nowrap;background:none}
-.btn-y{background:var(--y);color:var(--ink)}
-.btn-y:hover{background:var(--y2)}
-.btn-b{background:var(--b);color:#fff}
-.btn-b:hover{background:var(--b2)}
+.band{padding:clamp(64px,9vw,128px) max(5vw,16px)}
+.alt{background:var(--alt)}
+.sec-c{text-align:center;max-width:820px;margin:0 auto clamp(32px,5vw,56px)}
+.sec-t{font-size:clamp(34px,5.4vw,64px);text-wrap:balance}
+.sec-s{margin:16px auto 0;font-size:clamp(18px,1.9vw,23px);line-height:1.4;color:var(--mut);max-width:40ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;border:2px solid transparent;font-weight:600;text-decoration:none;white-space:nowrap;background:none;transition:background .2s,transform .2s}
+.btn:active{transform:scale(.98)}
+.btn-y,.btn-b{background:var(--b);color:#fff}
+.btn-y:hover,.btn-b:hover{background:var(--b2)}
 .btn-o{border-color:currentColor}
-.btn-sm{min-height:44px;padding:0 14px;font-size:15px}
-.icon-btn{width:44px;height:44px;display:inline-grid;place-items:center;border-radius:10px;border:1.5px solid #C3C8D0;background:#fff}
-.hdr{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);padding:10px max(5vw,16px)}
-.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
+.btn-sm{min-height:44px;padding:0 16px;font-size:15px}
+.btn-lg{min-height:56px;padding:0 30px;font-size:18px}
+.lnk{color:var(--b);font-weight:600;font-size:18px;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.lnk:hover{text-decoration:underline}
+.icon-btn{width:44px;height:44px;display:inline-grid;place-items:center;border-radius:12px;border:1.5px solid #C7C7CC;background:#fff}
+.icon-btn.round{border-radius:50%;background:#E8E8ED;border-color:transparent}
+.icon-btn.round:hover{background:#DCDCE1}
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.hdr{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.8);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.07);padding:6px max(5vw,16px)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
 .logo{display:block;line-height:0;text-decoration:none;color:var(--b)}
-.logo img{height:40px;width:auto}
-.logo .disp{font-size:24px;font-weight:800;line-height:40px}
-.nav{display:flex;gap:24px;font-weight:600;font-size:15px}
-.nav a{color:var(--ink);text-decoration:none}
-.nav a:hover{color:var(--b)}
-.hdr-r{display:flex;gap:10px;flex-wrap:wrap}
-.hero{background:var(--y);padding-bottom:clamp(28px,4vw,48px)}
-.hero-top{display:flex;flex-wrap:wrap;gap:24px 56px;align-items:flex-end}
-.ht-l{flex:999 1 540px}
-.hero h1{font-size:clamp(34px,4.8vw,62px);font-weight:800;text-wrap:balance}
-.lead{margin:16px 0 0;font-size:18px;max-width:60ch}
-.stats{flex:1 1 360px;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--ink);border:2px solid var(--ink);border-radius:12px;overflow:hidden}
-.stats div{background:var(--y);padding:12px 16px}
-.stats dt{font-size:14px;font-weight:600}
-.stats dd{margin:2px 0 0;font-family:Archivo,Inter,sans-serif;font-stretch:125%;font-weight:800;font-size:22px;line-height:1.15}
-.chartbox{margin:clamp(28px,4vw,44px) 0 0}
-.chart-scroll{overflow-x:auto;padding-top:8px}
-.chart{position:relative;height:clamp(240px,30vw,330px);display:flex;align-items:flex-end;gap:clamp(6px,1.4vw,18px);padding-left:52px;border-bottom:3px solid var(--ink);min-width:calc(var(--n) * 46px + 52px)}
-.gl{position:absolute;left:0;right:0;border-top:1px dashed rgba(23,24,28,.35);height:0}
-.gl span{position:absolute;left:0;top:-10px;font-size:13px;font-weight:600;background:var(--y);padding-right:6px}
-.col{flex:1 1 0;min-width:40px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;position:relative;z-index:1}
-.val{text-align:center;font-size:clamp(14px,1.6vw,20px);font-weight:800;margin-bottom:6px;white-space:nowrap}
-.bar{border:0;border-radius:8px 8px 0 0;background:var(--g);transition:background .15s;width:100%;position:relative;overflow:hidden}
-.bar::after{content:"";position:absolute;left:18%;right:18%;top:10px;height:6px;border-radius:3px;background:rgba(255,255,255,.22)}
-.bar:hover,.bar:focus-visible{background:var(--b)}
-.xlab{display:flex;gap:clamp(6px,1.4vw,18px);padding-left:52px;min-width:calc(var(--n) * 46px + 52px)}
-.xlab span{flex:1 1 0;min-width:40px;text-align:center;font-size:13px;font-weight:600;padding-top:8px;white-space:nowrap}
-.xlab i{font-style:normal}
-.chart-note{margin:14px 0 0;font-size:14px;font-weight:500}
-.sec-h{display:flex;flex-wrap:wrap;gap:12px 48px;align-items:flex-end;justify-content:space-between;margin-bottom:32px}
-.sec-h h2{flex:1 1 520px}
-.sec-h p{flex:1 1 320px;margin:0;color:#3E4450}
-.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:28px 20px;counter-reset:st}
-.flow li{position:relative}
-.flow li:not(:last-child)::after{content:"";position:absolute;top:31px;left:76px;right:-12px;border-top:3px dashed #C3C8D0}
-.fic{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--y);border:3px solid var(--ink);position:relative}
-.fic b{position:absolute;top:-8px;right:-8px;width:26px;height:26px;border-radius:50%;background:var(--b);color:#fff;font-size:13px;display:grid;place-items:center}
-.flow strong{display:block;margin-top:14px;font-size:18px}
-.flow span{color:#3E4450}
-.tools{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;justify-content:space-between;margin-bottom:20px}
+.logo img{height:34px;width:auto}
+.nav{display:flex;gap:26px;font-size:14px;font-weight:500}
+.nav a{color:var(--ink);text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;color:var(--b)}
+.hdr-r{display:flex;gap:10px;align-items:center}
+.hdr-tel{display:inline-flex;align-items:center;gap:6px;min-height:44px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap}
+.hero{position:relative;padding:clamp(36px,5vw,64px) max(5vw,16px) clamp(32px,5vw,64px);text-align:center;background:radial-gradient(110% 70% at 50% 100%,#E9ECFF 0%,#F7F8FF 38%,#FFFFFF 70%);overflow:hidden}
+.hero-in{will-change:transform,opacity}
+.hero-in>*{animation:up 1s cubic-bezier(.2,.7,.2,1) both}
+.hero-in>*:nth-child(2){animation-delay:.08s}
+.hero-in>*:nth-child(3){animation-delay:.16s}
+.hero-in>*:nth-child(4){animation-delay:.24s}
+@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.h-kicker{margin:0 0 12px;font-size:clamp(17px,1.7vw,22px);font-weight:700;color:var(--o2)}
+.h-title{font-size:clamp(46px,7vw,96px);letter-spacing:-.05em;line-height:1}
+.h-sub{margin:18px auto 0;max-width:36ch;font-size:clamp(19px,2.1vw,26px);line-height:1.35;color:var(--mut)}
+.h-cta{display:flex;gap:12px 28px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:24px}
+.h-stage{position:relative;max-width:min(1000px,calc((100svh - 120px) * 1.55));margin:clamp(20px,3vw,40px) auto 0;animation:rise 1.4s .2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(80px)}to{opacity:1;transform:none}}
+.h-prod{position:relative;z-index:1;width:100%;height:auto;transform-origin:50% 85%;will-change:transform}
+.h-shadow{position:absolute;left:8%;right:8%;bottom:-2%;height:9%;border-radius:50%;background:rgba(20,34,140,.28);filter:blur(22px)}
+.hl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.hl-t{background:#fff;border-radius:var(--r);padding:clamp(22px,2.4vw,32px)}
+.hl-n{font-weight:800;letter-spacing:-.04em;font-size:clamp(34px,3.1vw,48px);line-height:1;color:var(--b);white-space:nowrap}
+.hl-n small{font-size:.42em;letter-spacing:-.01em;color:var(--ink);margin-left:4px}
+.hl-t p{margin:12px 0 0;color:var(--mut);font-size:17px}
+.vcard{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:#0E0F12;max-width:1240px;margin:0 auto;box-shadow:0 30px 60px -30px rgba(27,45,176,.45)}
+.vcard video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vscrim{position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(0deg,rgba(0,0,0,.62),rgba(0,0,0,0));pointer-events:none}
+.vcap{position:absolute;left:clamp(20px,4vw,48px);right:96px;bottom:clamp(20px,4vw,44px);margin:0;color:#fff;font-weight:800;letter-spacing:-.035em;font-size:clamp(26px,4.6vw,60px);line-height:1.05;text-wrap:balance}
+.vcap.show{animation:up .6s cubic-bezier(.2,.7,.2,1) both}
+.vbtn{position:absolute;right:clamp(14px,2.5vw,28px);bottom:clamp(14px,2.5vw,28px);width:48px;height:48px;border-radius:50%;border:0;display:grid;place-items:center;background:rgba(255,255,255,.22);color:#fff;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.vbtn:hover{background:rgba(255,255,255,.34)}
+.feat{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:center}
+.feat-img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:#ddd}
+.feat-img img{width:100%;height:100%;object-fit:cover;animation:kb 14s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09) translate(-1.5%,-1%)}}
+.feat-t .sec-t{font-size:clamp(32px,4.4vw,54px)}
+.feat-t .sec-s{margin-left:0}
+.ticks{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px;font-weight:600}
+.ticks li{display:flex;gap:10px;align-items:center}
+.ticks svg{flex:none;color:#fff;background:var(--b);border-radius:50%;padding:3px;width:24px;height:24px}
+.ins{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px)}
+.ins-stick{position:sticky;top:88px;height:min(76vh,720px);border-radius:var(--r);overflow:hidden;background:var(--alt)}
+.ins-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .7s ease,transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.ins-img.fit{object-fit:contain;padding:8%;background:#F0EBDD}
+.ins-img.on{opacity:1;transform:none}
+.st-step{min-height:74vh;display:flex;flex-direction:column;justify-content:center;opacity:.28;transition:opacity .5s}
+.st-step.on{opacity:1}
+.st-n{font-weight:700;color:var(--o2);font-size:15px}
+.st-step h3{font-size:clamp(30px,3.6vw,46px);margin-top:10px}
+.st-step p{font-size:clamp(18px,1.8vw,22px);color:var(--mut);margin:14px 0 0;max-width:30ch}
+.st-mimg{display:none}
+.kchart{max-width:980px;margin:0 auto 36px;overflow-x:auto}
+.kc-in{display:flex;align-items:flex-end;gap:clamp(8px,2vw,22px);height:clamp(190px,24vw,280px);border-bottom:2px solid #D2D2D7;min-width:calc(var(--n) * 46px)}
+.kc-col{flex:1 1 0;min-width:40px;height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.kc-v{text-align:center;font-weight:800;letter-spacing:-.02em;font-size:clamp(14px,1.6vw,20px);margin-bottom:6px;white-space:nowrap}
+.kc-bar{height:calc(var(--h) * .8);border:0;border-radius:14px 14px 4px 4px;background:linear-gradient(180deg,#3E50E0 0%,#1B2DB0 100%);transform-origin:50% 100%;transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .2s}
+.kchart.rv{transform:none}
+.kchart:not(.in) .kc-bar{transform:scaleY(.02)}
+.kc-col:nth-child(2) .kc-bar{transition-delay:.06s}.kc-col:nth-child(3) .kc-bar{transition-delay:.12s}.kc-col:nth-child(4) .kc-bar{transition-delay:.18s}.kc-col:nth-child(5) .kc-bar{transition-delay:.24s}.kc-col:nth-child(6) .kc-bar{transition-delay:.3s}
+.kc-bar:hover,.kc-bar:focus-visible{filter:brightness(1.2)}
+.kc-xl{display:flex;gap:clamp(8px,2vw,22px);min-width:calc(var(--n) * 46px)}
+.kc-xl span{flex:1 1 0;min-width:40px;text-align:center;font-size:14px;font-weight:600;color:var(--mut);padding-top:8px;white-space:nowrap}
+.kc-xl i{font-style:normal}
+.kc-note{text-align:center;color:var(--mut);font-size:14px;margin:12px 0 0}
+.tools{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;margin-bottom:18px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip-b{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #C3C8D0;background:#fff;font-weight:600;font-size:15px}
-.chip-b[aria-pressed="true"]{background:var(--b);border-color:var(--b);color:#fff}
-.sel{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600}
-.sel select{min-height:44px;border:1.5px solid #C3C8D0;border-radius:10px;padding:0 10px;background:#fff;font-size:16px}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:20px}
-.pc{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.ph{display:block;width:100%;padding:0;border:0;background:#E9EBEE;aspect-ratio:4/3;position:relative;overflow:hidden}
+.chip-b{min-height:44px;padding:0 18px;border-radius:999px;border:0;background:#E8E8ED;font-weight:600;font-size:15px}
+.chip-b[aria-pressed="true"]{background:var(--ink);color:#fff}
+.arrows{display:flex;gap:10px}
+.track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px max(5vw,16px,calc((100% - 1240px) / 2)) 28px;scroll-padding-inline:max(5vw,16px,calc((100% - 1240px) / 2));scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.track>.pc{flex:0 0 min(84vw,370px);scroll-snap-align:start}
+.track>.empty{flex:1 1 100%}
+.pc{background:#fff;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.pc:hover{transform:translateY(-4px);box-shadow:0 24px 40px -24px rgba(0,0,0,.25)}
+.ph{display:block;width:100%;padding:0;border:0;background:#EDEDF0;aspect-ratio:4/3;position:relative;overflow:hidden}
 .ph img,.ph svg{width:100%;height:100%;object-fit:cover}
-.ph:hover img{transform:scale(1.03)}
-.ph img{transition:transform .3s}
-.stk{position:absolute;top:12px;left:12px;background:#fff;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700}
+.ph img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.pc:hover .ph img{transform:scale(1.04)}
+.stk{position:absolute;top:14px;left:14px;background:#fff;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700}
 .stk.on{background:var(--b);color:#fff}
-.pc-b{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
-.pc-t{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
-.pc-t h3{font-size:28px;white-space:nowrap}
-.pc-t .kw{font-weight:700;color:var(--b);white-space:nowrap}
-.pc-m{color:var(--mut);font-size:15px}
-.meter{height:8px;border-radius:4px;background:#E8EBEF;overflow:hidden}
-.meter i{display:block;height:100%;background:var(--b);border-radius:4px}
-.use{margin:0;display:flex;gap:6px;align-items:flex-start;font-size:15px;color:#3E4450}
-.use svg{flex:none;margin-top:3px;color:var(--o)}
-.pc-f{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-top:6px;border-top:1px solid var(--line)}
-.price{font-weight:800;font-size:18px;white-space:nowrap}
-.price.ask{font-weight:600;font-size:15px;color:var(--mut)}
-.pm{display:flex;gap:4px}
-.pm span{width:30px;height:30px;border-radius:8px;background:var(--soft);display:grid;place-items:center;color:var(--g)}
-.empty{grid-column:1/-1;background:#fff;border:1.5px dashed #C3C8D0;border-radius:14px;padding:32px;text-align:center}
-.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
-.side{border:2px solid var(--ink);border-radius:16px;overflow:hidden}
-.side-h{display:flex;gap:16px;align-items:center;padding:20px 22px;background:var(--y)}
-.side.yur .side-h{background:var(--b);color:#fff}
-.side-h h3{font-size:24px}
-.side-h p{margin:4px 0 0;font-size:15px}
-.ibig{width:56px;height:56px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;flex:none}
-.side-c{padding:22px;display:grid;gap:20px}
+.pc-b{padding:22px 24px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pc-k{font-size:40px;letter-spacing:-.045em}
+.pc-k small{font-size:.5em;letter-spacing:-.01em}
+.pc-kw{margin:0;font-weight:700;color:var(--b)}
+.use{margin:0;color:var(--mut);font-size:16px}
+.meter{height:6px;border-radius:3px;background:#E8E8ED;overflow:hidden;margin:6px 0}
+.meter i{display:block;height:100%;background:linear-gradient(90deg,#3E50E0,#1B2DB0);border-radius:3px}
+.pc-f{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-top:10px}
+.price{font-weight:800;font-size:19px;white-space:nowrap;letter-spacing:-.02em}
+.price.ask{font-weight:600;font-size:15px;color:var(--mut);letter-spacing:0}
+.note{text-align:center;color:var(--mut);font-size:14px;margin:0}
+.empty{background:#fff;border:1.5px dashed #C7C7CC;border-radius:var(--r);padding:32px;text-align:center}
+.phones{display:flex;flex-wrap:wrap;gap:clamp(24px,5vw,64px);justify-content:center}
+.phone{margin:0;width:min(300px,78vw);text-align:center}
+.ph-scr{position:relative;aspect-ratio:9/19;border-radius:46px;background:#1D1D1F;padding:11px;box-shadow:0 40px 70px -40px rgba(27,45,176,.55),inset 0 0 0 2px #3A3A3C}
+.ph-scr video{width:100%;height:100%;object-fit:cover;border-radius:36px;background:#000}
+.rplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;border:0;display:grid;place-items:center;background:rgba(255,255,255,.9);color:var(--b);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.rplay svg{margin-left:4px}
+.rplay:hover{background:#fff}
+.phone figcaption{margin-top:16px;font-weight:700;font-size:19px}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:28px 20px}
+.flow li{position:relative;background:#fff;border-radius:var(--r);padding:26px 24px}
+.fic{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--bt);color:var(--b);position:relative}
+.fic b{position:absolute;top:-6px;right:-6px;width:24px;height:24px;border-radius:50%;background:var(--o);color:#fff;font-size:13px;display:grid;place-items:center}
+.flow strong{display:block;margin-top:16px;font-size:19px;letter-spacing:-.01em}
+.flow span{color:var(--mut);font-size:16px}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.side{background:var(--alt);border-radius:var(--r);overflow:hidden}
+.side-h{display:flex;gap:16px;align-items:center;padding:26px 28px 6px}
+.side-h h3{font-size:28px}
+.side-h p{margin:4px 0 0;font-size:15px;color:var(--mut)}
+.ibig{width:56px;height:56px;border-radius:50%;background:var(--b);color:#fff;display:grid;place-items:center;flex:none}
+.side.yur .ibig{background:var(--o);color:#fff}
+.side-c{padding:20px 28px 28px;display:grid;gap:22px}
 .tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.tags li{background:var(--soft);border-radius:8px;padding:6px 12px;font-size:15px;font-weight:600}
-.plist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.tags li{background:#fff;border-radius:999px;padding:7px 14px;font-size:15px;font-weight:600}
+.plist{list-style:none;margin:0;padding:0;display:grid;gap:14px}
 .plist li{display:flex;gap:12px;align-items:flex-start}
-.pi{width:40px;height:40px;flex:none;border-radius:10px;background:var(--soft);display:grid;place-items:center;color:var(--b)}
+.pi{width:42px;height:42px;flex:none;border-radius:12px;background:#fff;display:grid;place-items:center;color:var(--b)}
 .plist small,.pay small{display:block;color:var(--mut);font-size:14px;line-height:1.4}
-.blue{background:var(--b);color:#fff}
-.ct{display:flex;flex-wrap:wrap;gap:28px 48px;align-items:center}
-.ct-l{flex:999 1 480px}
-.ct-l p{margin:14px 0 0;font-size:18px;color:#E6E9FF}
-.ct-b{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.ct-b .btn-o{color:#fff}
-.ct-b .btn-o:hover{background:rgba(255,255,255,.12)}
-.ct-img{flex:1 1 320px;max-width:520px;width:100%;filter:drop-shadow(0 18px 24px rgba(0,0,0,.35))}
-.ftr{padding:22px max(5vw,16px);font-size:14px;color:var(--mut)}
+.cta{background:var(--b);color:#fff;text-align:center;overflow:hidden}
+.cta .sec-t{color:#fff}
+.cta .sec-s{color:#D6DAFF}
+.cta-b{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+.cta .btn-w{background:#fff;color:var(--b)}
+.cta .btn-w:hover{background:#EEF0FF}
+.cta .btn-o{color:#fff}
+.cta .btn-o:hover{background:rgba(255,255,255,.12)}
+.cta-img{max-width:760px;margin:clamp(36px,5vw,60px) auto 0;filter:drop-shadow(0 30px 30px rgba(0,0,0,.35))}
+.ftr{background:var(--alt);padding:24px max(5vw,16px);font-size:13px;color:var(--mut)}
 .ftr .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between;align-items:center}
-.adm-link{border:0;background:none;color:var(--mut);text-decoration:underline;min-height:44px;padding:0;font-size:14px}
+.adm-link{border:0;background:none;color:var(--mut);text-decoration:underline;min-height:44px;padding:0;font-size:13px}
 .adm-note{margin:12px 20px 0;padding:10px 14px;border-radius:10px;background:#FFF4E5;color:#8A3B00;font-size:15px}
-.ov{position:fixed;inset:0;background:rgba(15,17,22,.62);z-index:50;display:flex;align-items:center;justify-content:center;padding:16px}
-.dlg{position:relative;background:#fff;border-radius:16px;width:100%;max-width:1020px;max-height:calc(100% - 16px);overflow:auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
-.dlg-x{position:absolute;top:10px;right:10px;z-index:2}
-.dl-l{background:var(--soft);padding:24px;display:flex;flex-direction:column;gap:14px}
-.dl-l .ph{border-radius:12px;pointer-events:none}
+/* order card + admin */
+.ov{position:fixed;inset:0;background:rgba(29,29,31,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);z-index:50;display:flex;align-items:center;justify-content:center;padding:16px}
+.dlg{position:relative;background:#fff;border-radius:var(--r);width:100%;max-width:1040px;max-height:calc(100% - 16px);overflow:auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);animation:pop .35s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:none}}
+.dlg-x{position:absolute;top:12px;right:12px;z-index:2;border-radius:50%}
+.dl-l{background:var(--alt);padding:26px;display:flex;flex-direction:column;gap:14px}
+.dl-l .ph{border-radius:20px;pointer-events:none}
 .dl-k{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.dl-k .disp{font-size:40px;font-weight:800}
+.dl-k .disp{font-size:44px}
 .dl-k span{font-weight:700;color:var(--b);font-size:18px}
-.specs{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:15px;background:#fff;border-radius:10px;padding:14px 16px}
+.specs{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:15px;background:#fff;border-radius:14px;padding:14px 16px}
 .specs dt{color:var(--mut)}
 .specs dd{margin:0;font-weight:700;text-align:right}
-.dl-r{padding:28px}
-.dlg-title{font-size:26px;margin:0 52px 18px 0}
+.dl-r{padding:30px}
+.dlg-title{font-size:30px;margin:0 52px 18px 0}
 .fs{border:0;padding:0;margin:0 0 18px}
 .fs legend{font-weight:700;margin-bottom:8px;padding:0}
-.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--soft);padding:5px;border-radius:12px}
-.seg button{min-height:48px;border:0;border-radius:9px;background:transparent;font-weight:700;display:flex;gap:8px;align-items:center;justify-content:center}
-.seg button[aria-pressed="true"]{background:#fff;color:var(--b);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#E8E8ED;padding:4px;border-radius:14px}
+.seg button{min-height:48px;border:0;border-radius:11px;background:transparent;font-weight:700;display:flex;gap:8px;align-items:center;justify-content:center}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--b);box-shadow:0 1px 4px rgba(0,0,0,.14)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px 16px;margin-bottom:18px}
-.fld .wide,.fld.wide{grid-column:1/-1}
+.fld.wide{grid-column:1/-1}
 .fld label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
 .req{color:var(--red)}
-.fld input,.fld textarea,.fld select{width:100%;min-height:48px;border:1.5px solid #C3C8D0;border-radius:10px;padding:10px 12px;font-size:16px;background:#fff}
+.fld input,.fld textarea,.fld select{width:100%;min-height:50px;border:1.5px solid #C7C7CC;border-radius:12px;padding:10px 14px;font-size:16px;background:#fff}
+.fld input:focus,.fld textarea:focus,.fld select:focus{border-color:var(--b);outline:3px solid rgba(27,45,176,.18);outline-offset:0}
 .fld textarea{min-height:84px;resize:vertical}
 .fld input[aria-invalid="true"]{border-color:var(--red)}
 .pre{display:flex}
-.pre span{display:grid;place-items:center;padding:0 12px;border:1.5px solid #C3C8D0;border-right:0;border-radius:10px 0 0 10px;background:var(--soft);font-weight:600}
-.pre input{border-radius:0 10px 10px 0}
+.pre span{display:grid;place-items:center;padding:0 12px;border:1.5px solid #C7C7CC;border-right:0;border-radius:12px 0 0 12px;background:var(--alt);font-weight:600}
+.pre input{border-radius:0 12px 12px 0}
 .err{color:var(--red);font-size:14px;margin-top:4px}
 .opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
-.pay{display:flex;gap:12px;align-items:flex-start;border:1.5px solid #C3C8D0;border-radius:12px;padding:12px;cursor:pointer;background:#fff}
+.pay{display:flex;gap:12px;align-items:flex-start;border:1.5px solid #C7C7CC;border-radius:14px;padding:12px;cursor:pointer;background:#fff}
 .pay:has(input:checked){border-color:var(--b);background:var(--bt)}
 .pay input{margin:12px 0 0;accent-color:var(--b);width:18px;height:18px;flex:none}
+.pay .pi{background:var(--alt)}
 .qty{display:flex;align-items:center;gap:6px}
-.qty output{width:48px;text-align:center;font-size:22px;font-weight:800;font-family:Archivo,sans-serif}
-.sum{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:16px 0;border-top:2px solid var(--ink);margin-top:6px}
-.sum strong{font-size:26px;font-weight:800}
+.qty output{width:48px;text-align:center;font-size:24px;font-weight:800}
+.sum{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--line);margin-top:6px}
+.sum strong{font-size:28px}
 .big{width:100%;min-height:56px;font-size:17px}
 .fine{font-size:14px;color:var(--mut);margin:10px 0 0}
 .ok{display:flex;flex-direction:column;gap:14px}
 .okic{width:56px;height:56px;border-radius:50%;background:#12B76A;color:#fff;display:grid;place-items:center}
 .send{display:flex;flex-wrap:wrap;gap:10px}
-.otext{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--soft);border-radius:10px;padding:14px;font:14px/1.5 ui-monospace,Menlo,monospace;margin:8px 0 0}
+.otext{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--alt);border-radius:12px;padding:14px;font:14px/1.5 ui-monospace,Menlo,monospace;margin:8px 0 0}
 details summary{cursor:pointer;font-weight:700;min-height:32px}
-.adm{position:fixed;inset:0;z-index:60;background:rgba(15,17,22,.5);display:flex;justify-content:flex-end}
+.adm{position:fixed;inset:0;z-index:60;background:rgba(29,29,31,.45);display:flex;justify-content:flex-end}
 .adm-p{background:#fff;width:min(840px,100%);height:100%;overflow:auto;display:flex;flex-direction:column}
 .adm-h{position:sticky;top:0;z-index:2;background:#fff;border-bottom:1px solid var(--line);padding:14px 20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
 .adm-h h2{font-size:22px}
@@ -192,14 +249,14 @@ details summary{cursor:pointer;font-weight:700;min-height:32px}
 .adm-msg{margin:0;padding:0 20px;font-weight:600;color:var(--b)}
 .adm-msg:not(:empty){padding:12px 20px 0}
 .tabs{display:flex;gap:6px;padding:14px 20px 0;flex-wrap:wrap}
-.tabs button{min-height:44px;padding:0 16px;border:1.5px solid #C3C8D0;border-radius:10px;background:#fff;font-weight:600}
-.tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tabs button{min-height:44px;padding:0 16px;border:0;border-radius:999px;background:#E8E8ED;font-weight:600}
+.tabs button[aria-selected="true"]{background:var(--ink);color:#fff}
 .adm-b{padding:20px;display:grid;gap:14px}
 .alist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.arow{border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.arow{border:1px solid var(--line);border-radius:16px;padding:10px 12px}
 .ar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .ar-m{display:flex;gap:12px;align-items:center}
-.thumb{width:64px;height:48px;border-radius:8px;overflow:hidden;flex:none;background:#E9EBEE}
+.thumb{width:64px;height:48px;border-radius:8px;overflow:hidden;flex:none;background:#EDEDF0}
 .thumb img,.thumb svg{width:100%;height:100%;object-fit:cover}
 .ar-m small{display:block;color:var(--mut)}
 .ar-a{display:flex;gap:6px;flex-wrap:wrap}
@@ -211,15 +268,16 @@ details summary{cursor:pointer;font-weight:700;min-height:32px}
 .hint{font-size:14px;color:var(--mut);margin-top:4px}
 .chk{display:flex;gap:10px;align-items:center;min-height:44px;font-weight:600}
 .chk input{width:20px;height:20px;accent-color:var(--b)}
-@media(max-width:760px){.ov{padding:0}.dlg{grid-template-columns:minmax(0,1fr);border-radius:0;max-height:100%;height:100%}.dl-l .ph{max-height:220px;aspect-ratio:auto;height:200px}.dl-r{padding:20px 16px 28px}.dl-l{padding:16px;padding-top:60px}}
-@media(max-width:720px){.nav{display:none}.flow li::after{display:none}.flow li{display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:16px}.flow .fic{grid-row:span 2}.flow strong{margin-top:2px}}
-@media(max-width:600px){.chart{padding-left:36px;min-width:calc(var(--n) * 42px + 36px)}.xlab{padding-left:36px;min-width:calc(var(--n) * 42px + 36px)}.gl span{font-size:13px}.xlab i{display:none}.stats dd{font-size:18px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media(max-width:900px){.feat{grid-template-columns:minmax(0,1fr)}.ins{grid-template-columns:minmax(0,1fr)}.ins-media{display:none}.st-step{min-height:0;opacity:1;padding:20px 0 28px}.st-mimg{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;margin-bottom:18px}.st-mimg.fit{object-fit:contain;background:#F0EBDD;padding:6%}}
+@media(max-width:820px){.nav{display:none}}
+@media(max-width:760px){.ov{padding:0}.dlg{grid-template-columns:minmax(0,1fr);border-radius:0;max-height:100%;height:100%}.dl-l .ph{aspect-ratio:auto;height:200px}.dl-r{padding:20px 16px 28px}.dl-l{padding:16px;padding-top:64px}}
+@media(max-width:600px){.vcard{aspect-ratio:4/5}.vcap{right:72px}.hdr-tel span{display:none}.kc-xl i{display:none}.logo img{height:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <div id="app"><noscript>Sahifani ko‘rish uchun JavaScript yoqilgan bo‘lishi kerak.</noscript></div>
-<script type="application/json" id="store">{"v":1,"assets":{"logo":"img/logo.png","machine":"img/hero.webp"},"settings":{"phone":"+998 92 027 82 68","telegram":"","whatsapp":false,"instagram":"lioxpower.uz","address":"Toshkent, Namunali uylar ko‘chasi","delivery":"Toshkent bo‘ylab bepul"},"payments":[{"id":"cash","name":"Naqd pul","desc":"Yetkazib berilganda yoki ofisda","who":"fiz","icon":"cash","on":true},{"id":"card","name":"Plastik karta","desc":"Uzcard yoki Humo, terminal orqali","who":"all","icon":"card","on":true},{"id":"click","name":"Click","desc":"To‘lov ma’lumotini menejer yuboradi","who":"fiz","icon":"phone","on":true},{"id":"payme","name":"Payme","desc":"To‘lov ma’lumotini menejer yuboradi","who":"fiz","icon":"wallet","on":true},{"id":"bank","name":"Bank o‘tkazmasi","desc":"Shartnoma asosida, korxona hisobidan","who":"yur","icon":"bank","on":true}],"products":[{"id":"p30","name":"LIOX 37,5 kVA","kva":37.5,"model":"GFC-38R","price":0,"stock":"bor","use":"Do‘kon, kafe, xonadon","img":"img/m30.jpg","specs":"Chastota: 50 Hz\nKuchlanish: 400/230 V\nFazalar: 3\nOg‘irligi: 875 kg\nKorpus: Super Silent"},{"id":"p40","name":"LIOX 50 kVA","kva":50,"model":"","price":0,"stock":"bor","use":"Katta do‘kon, ofis","img":"img/m40.jpg","specs":"Korpus: shovqin pasaytiruvchi"},{"id":"p50","name":"LIOX 62,5 kVA","kva":62.5,"model":"","price":0,"stock":"bor","use":"Restoran, kichik ishlab chiqarish","img":"img/m50.jpg","specs":"Korpus: shovqin pasaytiruvchi"},{"id":"p150","name":"LIOX 187,5 kVA","kva":187.5,"model":"GFC-188R","price":0,"stock":"bor","use":"Sex, savdo markazi","img":"img/m150.jpg","specs":"Korpus: shovqin pasaytiruvchi"},{"id":"p200","name":"LIOX 250 kVA","kva":250,"model":"","price":0,"stock":"bor","use":"Zavod, qurilish maydoni","img":"img/m200.jpg","specs":"Korpus: shovqin pasaytiruvchi"},{"id":"p300","name":"LIOX 375 kVA","kva":375,"model":"","price":0,"stock":"bor","use":"Yirik korxona, ombor","img":"img/m300.jpg","specs":"Korpus: shovqin pasaytiruvchi"}]}</script>
+<script type="application/json" id="store">{"v":1,"assets":{"logo":"img/logo.png","machine":"img/hero.webp","hero":"img/hero-gen.webp"},"settings":{"phone":"+998 92 027 82 68","telegram":"","whatsapp":false,"instagram":"lioxpower.uz","address":"Toshkent, Namunali uylar ko‘chasi","delivery":"Toshkent bo‘ylab bepul"},"payments":[{"id":"cash","name":"Naqd pul","desc":"Yetkazib berilganda yoki ofisda","who":"fiz","icon":"cash","on":true},{"id":"card","name":"Plastik karta","desc":"Uzcard yoki Humo, terminal orqali","who":"all","icon":"card","on":true},{"id":"click","name":"Click","desc":"To‘lov ma’lumotini menejer yuboradi","who":"fiz","icon":"phone","on":true},{"id":"payme","name":"Payme","desc":"To‘lov ma’lumotini menejer yuboradi","who":"fiz","icon":"wallet","on":true},{"id":"bank","name":"Bank o‘tkazmasi","desc":"Shartnoma asosida, korxona hisobidan","who":"yur","icon":"bank","on":true}],"products":[{"id":"p30","name":"LIOX 37,5 kVA","kva":37.5,"model":"GFC-38R","price":0,"stock":"bor","use":"Do‘kon, kafe, xonadon","img":"img/m30.jpg","specs":"Chastota: 50 Hz\nKuchlanish: 400/230 V\nFazalar: 3\nOg‘irligi: 875 kg\nKorpus: Super Silent"},{"id":"p40","name":"LIOX 50 kVA","kva":50,"model":"","price":0,"stock":"bor","use":"Katta do‘kon, ofis","img":"img/m40.jpg","specs":"Korpus: shovqin pasaytiruvchi"},{"id":"p50","name":"LIOX 62,5 kVA","kva":62.5,"model":"","price":0,"stock":"bor","use":"Restoran, kichik ishlab chiqarish","img":"img/m50.jpg","specs":"Korpus: shovqin pasaytiruvchi"},{"id":"p150","name":"LIOX 187,5 kVA","kva":187.5,"model":"GFC-188R","price":0,"stock":"bor","use":"Sex, savdo markazi","img":"img/m150.jpg","specs":"Korpus: shovqin pasaytiruvchi"},{"id":"p200","name":"LIOX 250 kVA","kva":250,"model":"","price":0,"stock":"bor","use":"Zavod, qurilish maydoni","img":"img/m200.jpg","specs":"Korpus: shovqin pasaytiruvchi"},{"id":"p300","name":"LIOX 375 kVA","kva":375,"model":"","price":0,"stock":"bor","use":"Yirik korxona, ombor","img":"img/m300.jpg","specs":"Korpus: shovqin pasaytiruvchi"}]}</script>
 <script id="app-js">
 {
 const HEAD = '<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>LIOX Power katalog</title>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700&display=swap">';
@@ -294,120 +352,239 @@ let admMsg = '';
 const LS_KEY = 'liox-draft-v1';
 
 /* ---------- page ---------- */
+Object.assign(IC, {
+  pause: '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>',
+  play: '<path d="M7 4.5v15l12.5-7.5z"/>',
+  left: '<path d="M15 18l-6-6 6-6"/>',
+  right: '<path d="M9 18l6-6-6-6"/>'
+});
+const NAV = [['#modellar', 'Generatorlar'], ['#video', 'Video'], ['#ichida', 'Ichida'], ['#tolov', 'To‘lov'], ['#aloqa', 'Aloqa']];
 const hdr = () => {
   const logo = blob(S.assets.logo);
   return '<header class="hdr"><div class="wrap hdr-in">' +
     '<a href="#top" class="logo" aria-label="LIOX Power, sahifa boshi">' + (logo ? '<img src="' + logo + '" alt="LIOX Power">' : '<span class="disp">LIOX Power</span>') + '</a>' +
-    '<nav class="nav" aria-label="Bo‘limlar"><a href="#katalog">Katalog</a><a href="#buyurtma">Buyurtma</a><a href="#tolov">To‘lov</a><a href="#aloqa">Aloqa</a></nav>' +
-    '<div class="hdr-r">' + (canEdit ? '<button type="button" class="btn btn-sm btn-b" data-act="admin">' + ic('edit', 18) + 'Admin panel</button>' : '') +
-    '<a class="btn btn-sm btn-y" href="tel:+' + phoneDigits() + '">' + ic('call', 18) + esc(S.settings.phone) + '</a></div>' +
-    '</div></header>';
+    '<nav class="nav" aria-label="Bo‘limlar">' + NAV.map((n) => '<a href="' + n[0] + '">' + n[1] + '</a>').join('') + '</nav>' +
+    '<div class="hdr-r">' + (canEdit ? '<button type="button" class="btn btn-sm btn-o" data-act="admin">' + ic('edit', 16) + 'Admin</button>' : '') +
+    '<a class="hdr-tel" href="tel:+' + phoneDigits() + '" aria-label="Qo‘ng‘iroq: ' + esc(S.settings.phone) + '">' + ic('call', 17) + '<span>' + esc(S.settings.phone) + '</span></a>' +
+    '<a class="btn btn-sm btn-b" href="#modellar">Buyurtma</a></div></div></header>';
 };
 
 const hero = () => {
+  const m = blob(S.assets.hero) || blob(S.assets.machine);
+  return '<section class="hero" id="top"><div class="hero-in" id="hero-in">' +
+    '<p class="h-kicker">LIOX Power dizel generatorlari</p>' +
+    '<h1 class="h-title">Tok o‘chadi.<br>Ish to‘xtamaydi.</h1>' +
+    '<p class="h-sub">30 dan 3000 kVt gacha. Toshkent bo‘ylab bepul yetkazamiz, o‘rnatamiz va xizmat ko‘rsatamiz.</p>' +
+    '<div class="h-cta"><a class="btn btn-b btn-lg" href="#modellar">Modelni tanlash</a><a class="lnk" href="#video">Videoni ko‘rish ›</a></div></div>' +
+    (m ? '<div class="h-stage"><div class="h-shadow" aria-hidden="true"></div><img class="h-prod" id="h-prod" src="' + m + '" alt="LIOX Power 37,5 kVA dizel generatori, Super Silent korpusda" fetchpriority="high"></div>' : '') +
+    '</section>';
+};
+
+const highlights = () => {
+  const inStock = S.products.filter((p) => p.stock === 'bor').length;
+  const tiles = [
+    ['<span class="cnt" data-to="30">30</span>–<span class="cnt" data-to="3000">3000</span><small>kVt</small>', 'Quvvat oralig‘i: do‘kondan zavodgacha'],
+    ['ISO 9001', 'va CE sertifikatlari zavod pasportida'],
+    ['ATS', 'Shahar toki o‘chsa, generator o‘zi ishga tushadi'],
+    inStock ? ['<span class="cnt" data-to="' + inStock + '">' + inStock + '</span><small>model</small>', 'omborda tayyor turibdi'] : ['Bepul', 'Toshkent bo‘ylab yetkazib berish']
+  ];
+  return '<section class="band alt" aria-label="Asosiy ko‘rsatkichlar"><div class="wrap hl">' + tiles.map((t) => '<div class="hl-t rv"><div class="hl-n">' + t[0] + '</div><p>' + t[1] + '</p></div>').join('') + '</div></section>';
+};
+
+const CAPS = [[0, 'Kechki savdo avjida.'], [3.9, 'Tok o‘chdi.'], [6.3, 'LIOX Power o‘zi ishga tushdi.'], [8.2, 'Konditsioner ishlayapti.'], [10.8, 'Muzlatkichlar ham. Savdo davom etadi.']];
+const story = () => '<section class="band" id="video"><div class="wrap"><div class="sec-c rv"><h2 class="sec-t">Tok o‘chganda nima bo‘ladi?</h2><p class="sec-s">ATS bilan generator o‘zi ishga tushadi va yuklamani oladi. Do‘kon ishlashda davom etadi.</p></div>' +
+  '<div class="vcard rv"><video class="auto" id="bo-v" src="video/blackout.mp4" poster="img/blackout-poster.jpg" muted loop playsinline preload="metadata" aria-label="Do‘konda tok o‘chishi va generator ishga tushishi haqida video"></video>' +
+  '<div class="vscrim" aria-hidden="true"></div><p class="vcap show" id="bo-cap">' + CAPS[0][1] + '</p>' +
+  '<button type="button" class="vbtn" id="bo-btn" data-act="vtoggle" aria-label="Videoni ijro etish">' + ic('play', 20) + '</button></div></div></section>';
+
+const silent = () => '<section class="band alt"><div class="wrap feat"><div class="feat-img rv"><img src="img/silent.jpg" alt="Super Silent yozuvli generator eshigi yaqindan" loading="lazy"></div>' +
+  '<div class="feat-t rv"><h2 class="sec-t">Super Silent korpus</h2><p class="sec-s">Shovqin pasaytiruvchi korpus generatorni do‘kon, ofis va uy yonida ham qulay qiladi.</p>' +
+  '<ul class="ticks"><li>' + ic('check', 18) + 'Qulflanadigan servis eshiklari</li><li>' + ic('check', 18) + 'Sovutish uchun havo panjarasi</li><li>' + ic('check', 18) + 'Forklift teshiklari bilan po‘lat rama</li></ul></div></div></section>';
+
+const INS = [
+  ['img/d-engine.jpg', 'Dizel dvigatel', 'Yon eshikni ochsangiz, dvigatel, yoqilg‘i filtri va akkumulyator qo‘l ostida. Xizmat ko‘rsatish oson.', 'Ochiq eshik ortidagi dizel dvigatel', ''],
+  ['img/d-panel.jpg', 'Raqamli boshqaruv paneli', 'Generator holati ekranda bir qarashda ko‘rinadi.', 'Generatorning boshqaruv paneli', ''],
+  ['img/d-stop.jpg', 'Avariya to‘xtatish tugmasi', 'Kerak bo‘lsa, bir bosishda generatorni to‘xtatadi.', 'Qizil avariya to‘xtatish tugmasi', ''],
+  ['img/d-plate.jpg', 'Zavod pasporti', 'Har bir generatorda model, quvvat va sertifikatlar yozilgan plita bor: CE va ISO 9001.', 'Generatorning zavod pasporti plitasi', 'fit']
+];
+const inside = () => '<section class="band" id="ichida"><div class="wrap"><div class="sec-c rv"><h2 class="sec-t">Ichida nima bor</h2><p class="sec-s">Har bir detal ko‘z oldingizda.</p></div><div class="ins">' +
+  '<div class="ins-media" aria-hidden="true"><div class="ins-stick">' + INS.map((x, i) => '<img class="ins-img' + (x[4] ? ' fit' : '') + (i === 0 ? ' on' : '') + '" data-i="' + i + '" src="' + x[0] + '" alt="" loading="lazy">').join('') + '</div></div>' +
+  '<div class="ins-steps">' + INS.map((x, i) => '<div class="st-step' + (i === 0 ? ' on' : '') + '" data-step="' + i + '"><img class="st-mimg' + (x[4] ? ' fit' : '') + '" src="' + x[0] + '" alt="' + x[3] + '" loading="lazy"><span class="st-n">' + (i + 1) + ' / ' + INS.length + '</span><h3>' + x[1] + '</h3><p>' + x[2] + '</p></div>').join('') + '</div></div></div></section>';
+
+const FILTERS = [['all', 'Hammasi'], ['s', '70 kVA gacha'], ['m', '70–260 kVA'], ['l', '260 kVA dan katta']];
+const inFilt = (p) => filt === 'all' || (filt === 's' && p.kva <= 70) || (filt === 'm' && p.kva > 70 && p.kva <= 260) || (filt === 'l' && p.kva > 260);
+
+const card = (p, max) => {
+  const pct = Math.max(3, (Number(p.kva) || 0) / max * 100).toFixed(1);
+  const st = stockTxt[p.stock];
+  return '<article class="pc"><button type="button" class="ph" data-act="open" data-id="' + esc(p.id) + '" aria-label="' + esc(p.name) + ' kartasini ochish">' + picOf(p) + (st ? '<span class="stk' + (p.stock === 'bor' ? ' on' : '') + '">' + st + '</span>' : '') + '</button>' +
+    '<div class="pc-b"><h3 class="pc-k">' + num(p.kva) + ' <small>kVA</small></h3><p class="pc-kw">' + num(kwOf(p)) + ' kVt' + (p.model ? ' · ' + esc(p.model) : '') + '</p>' +
+    (p.use ? '<p class="use">' + esc(p.use) + '</p>' : '') +
+    '<div class="meter" role="img" aria-label="Quvvat: katalogdagi eng kattasining ' + Math.round(pct) + '%"><i style="width:' + pct + '%"></i></div>' +
+    '<div class="pc-f"><span class="price' + (p.price > 0 ? '' : ' ask') + '">' + (p.price > 0 ? money(p.price) : 'Narxi so‘rov bo‘yicha') + '</span><button type="button" class="btn btn-b btn-sm" data-act="open" data-id="' + esc(p.id) + '">Buyurtma berish</button></div></div></article>';
+};
+
+const cards = () => {
+  if (!S.products.length) return '<div class="empty"><strong>Katalog hozircha bo‘sh.</strong>' + (canEdit ? ' Admin paneldan birinchi mahsulotni qo‘shing.' : ' Tez orada mahsulotlar qo‘shiladi.') + '</div>';
+  const max = Math.max(1, ...S.products.map((p) => Number(p.kva) || 0));
+  const list = S.products.filter(inFilt);
+  if (!list.length) return '<div class="empty"><strong>Bu oraliqda model yo‘q.</strong> <button type="button" class="btn btn-sm btn-o" data-act="filter" data-id="all">Hammasini ko‘rsatish</button></div>';
+  return list.map((p) => card(p, max)).join('');
+};
+
+const chart = () => {
   const ps = byKva();
+  if (!ps.length) return '';
   const max = Math.max(1, ...ps.map((p) => Number(p.kva) || 0));
-  const min = ps.length ? ps[0].kva : 0;
-  const step = max <= 120 ? 25 : max <= 450 ? 100 : max <= 1200 ? 250 : 500;
-  let grid = '';
-  for (let v = step; v <= max; v += step) grid += '<div class="gl" style="bottom:calc(' + (v / max * 100).toFixed(2) + ' * .82%)"><span>' + v + '</span></div>';
-  const cols = ps.map((p) => {
-    const h = Math.max(5, (Number(p.kva) || 0) / max * 100).toFixed(2);
-    return '<div class="col"><span class="val disp">' + num(p.kva) + '</span><button type="button" class="bar" style="height:calc(' + h + ' * .82%)" data-act="open" data-id="' + esc(p.id) + '" aria-label="' + esc(p.name) + ', ' + num(p.kva) + ' kVA: kartani ochish"></button></div>';
-  }).join('');
-  const xl = ps.map((p) => '<span>' + num(kwOf(p)) + '<i> kVt</i></span>').join('');
-  return '<section class="hero band" id="top"><div class="wrap">' +
-    '<div class="hero-top"><div class="ht-l"><h1>Quvvatni tanlang, buyurtmani bitta kartada bering</h1>' +
-    '<p class="lead">Ustunni yoki katalogdagi generatorni bosing: karta ochiladi. Ma’lumotlaringizni kiritasiz, to‘lov turini tanlaysiz, menejer tasdiqlaydi.</p></div>' +
-    '<dl class="stats"><div><dt>Katalogda</dt><dd>' + ps.length + ' model</dd></div><div><dt>Quvvat oralig‘i</dt><dd>' + (ps.length ? num(min) + '–' + num(max) + ' kVA' : '—') + '</dd></div>' +
-    '<div><dt>To‘lov turlari</dt><dd>' + payOn().length + ' xil</dd></div><div><dt>Yetkazish</dt><dd>' + esc(S.settings.delivery || '—') + '</dd></div></dl></div>' +
-    (ps.length ? '<figure class="chartbox"><figcaption class="sr">Katalogdagi generatorlar quvvati, kVA</figcaption><div class="chart-scroll"><div class="chart" style="--n:' + ps.length + '">' + grid + cols + '</div><div class="xlab" style="--n:' + ps.length + '">' + xl + '</div></div>' +
-    '<p class="chart-note">Ustun balandligi = to‘liq quvvat, kVA. Pastda foydali quvvat, kVt: kVA × 0,8.</p></figure>' : '') +
-    '</div></section>';
+  return '<div class="kchart rv" style="--n:' + ps.length + '"><div class="kc-in">' + ps.map((p) => {
+    const h = Math.max(6, (Number(p.kva) || 0) / max * 100).toFixed(1);
+    return '<div class="kc-col"><span class="kc-v">' + num(p.kva) + '</span><button type="button" class="kc-bar" style="--h:' + h + '%" data-act="open" data-id="' + esc(p.id) + '" aria-label="' + esc(p.name) + ', ' + num(p.kva) + ' kVA: kartani ochish"></button></div>';
+  }).join('') + '</div><div class="kc-xl">' + ps.map((p) => '<span>' + num(kwOf(p)) + '<i> kVt</i></span>').join('') + '</div><p class="kc-note">Ustun balandligi = quvvat, kVA. Pastda foydali quvvat, kVt.</p></div>';
+};
+
+const lineup = () => '<section class="band alt" id="modellar"><div class="wrap"><div class="sec-c rv"><h2 class="sec-t">Qaysi quvvat sizga mos?</h2><p class="sec-s">Ustunni yoki kartochkani bosing: texnik ma’lumot va buyurtma formasi bitta kartada ochiladi.</p></div>' + chart() +
+  '<div class="tools"><div class="chips" role="group" aria-label="Quvvat bo‘yicha saralash">' + FILTERS.map((f) => '<button type="button" class="chip-b" data-act="filter" data-id="' + f[0] + '" aria-pressed="' + (filt === f[0]) + '">' + f[1] + '</button>').join('') + '</div>' +
+  '<div class="arrows"><button type="button" class="icon-btn round" data-act="car" data-id="-1" aria-label="Oldingi modellar">' + ic('left', 20) + '</button><button type="button" class="icon-btn round" data-act="car" data-id="1" aria-label="Keyingi modellar">' + ic('right', 20) + '</button></div></div></div>' +
+  '<div class="track" id="plist" tabindex="0" role="region" aria-label="Modellar">' + cards() + '</div>' +
+  '<div class="wrap"><p class="note">kVt = kVA × 0,8. Narx komplektatsiyaga qarab beriladi.</p></div></section>';
+
+const reels = () => {
+  const ig = uname(S.settings.instagram);
+  return '<section class="band" id="reels"><div class="wrap"><div class="sec-c rv"><h2 class="sec-t">Necha kVt kerak? 35 soniyada.</h2><p class="sec-s">Instagram’dagi videolarimiz: jonli va animatsion.</p></div><div class="phones">' +
+    [['jonli', 'Jonli video'], ['anim', 'Animatsion video']].map((r) => '<figure class="phone rv"><div class="ph-scr"><video class="reel" id="rl-' + r[0] + '" src="video/reel-' + r[0] + '.mp4" poster="img/reel-' + r[0] + '.jpg" playsinline preload="none"></video>' +
+      '<button type="button" class="rplay" data-act="reel" data-id="' + r[0] + '" aria-label="' + r[1] + 'ni ovoz bilan ko‘rish">' + ic('play', 30) + '</button></div><figcaption>' + r[1] + '</figcaption></figure>').join('') +
+    '</div>' + (ig ? '<p class="sec-c" style="margin:28px auto 0"><a class="lnk" href="https://instagram.com/' + ig + '">Instagram’da kuzatish ›</a></p>' : '') + '</div></section>';
 };
 
 const flow = () => {
   const names = payOn().map((x) => x.name);
   const steps = [
-    ['tap', 'Generatorni tanlang', 'Grafikdagi ustunni yoki katalog kartochkasini bosing'],
+    ['tap', 'Generatorni tanlang', 'Grafikdagi ustunni yoki kartochkani bosing'],
     ['form', 'Ma’lumotlaringizni kiriting', 'Ism, telefon, manzil. Korxona bo‘lsa: nomi va STIR'],
     ['wallet', 'To‘lov turini tanlang', names.length ? names.join(', ') : 'Menejer bilan kelishiladi'],
     ['send', 'Buyurtmani yuboring', 'Tayyor matn sotuvchiga bir bosishda yuboriladi'],
     ['check', 'Menejer tasdiqlaydi', 'Narx, to‘lov va yetkazish vaqti kelishiladi']
   ];
-  return '<section class="band" id="buyurtma"><div class="wrap"><div class="sec-h"><h2>Buyurtma 5 qadamda</h2><p>Ro‘yxatdan o‘tish shart emas. Hammasi bitta kartada.</p></div><ol class="flow">' +
-    steps.map((s, i) => '<li><div class="fic">' + ic(s[0], 28) + '<b>' + (i + 1) + '</b></div><strong>' + s[1] + '</strong><span>' + esc(s[2]) + '</span></li>').join('') + '</ol></div></section>';
-};
-
-const FILTERS = [['all', 'Hammasi'], ['s', '70 kVA gacha'], ['m', '70–260 kVA'], ['l', '260 kVA dan katta']];
-const inFilt = (p) => filt === 'all' || (filt === 's' && p.kva <= 70) || (filt === 'm' && p.kva > 70 && p.kva <= 260) || (filt === 'l' && p.kva > 260);
-
-const card = (p, max, pm) => {
-  const pct = Math.max(3, (Number(p.kva) || 0) / max * 100).toFixed(1);
-  const st = stockTxt[p.stock];
-  return '<article class="pc"><button type="button" class="ph" data-act="open" data-id="' + esc(p.id) + '" aria-label="' + esc(p.name) + ' kartasini ochish">' + picOf(p) + (st ? '<span class="stk' + (p.stock === 'bor' ? ' on' : '') + '">' + st + '</span>' : '') + '</button>' +
-    '<div class="pc-b"><div class="pc-t"><h3>' + num(p.kva) + ' kVA</h3><span class="kw">' + num(kwOf(p)) + ' kVt</span></div>' +
-    '<div class="pc-m">' + esc(p.name) + (p.model ? ' · ' + esc(p.model) : '') + '</div>' +
-    '<div class="meter" role="img" aria-label="Quvvat: katalogdagi eng kattasining ' + Math.round(pct) + '%"><i style="width:' + pct + '%"></i></div>' +
-    (p.use ? '<p class="use">' + ic('bolt', 16) + '<span>' + esc(p.use) + '</span></p>' : '') +
-    '<div class="pc-f">' + (p.price > 0 ? '<span class="price">' + money(p.price) + '</span>' : '<span class="price ask">Narxi so‘rov bo‘yicha</span>') + pm + '</div>' +
-    '<button type="button" class="btn btn-y" data-act="open" data-id="' + esc(p.id) + '">Buyurtma berish</button></div></article>';
-};
-
-const cards = () => {
-  if (!S.products.length) return '<div class="empty"><strong>Katalog hozircha bo‘sh.</strong>' + (canEdit ? ' “Katalogni tahrirlash” tugmasi orqali birinchi mahsulotni qo‘shing.' : ' Tez orada mahsulotlar qo‘shiladi.') + '</div>';
-  const max = Math.max(1, ...S.products.map((p) => Number(p.kva) || 0));
-  let list = S.products.filter(inFilt);
-  if (sortBy === 'kva') list = list.slice().sort((a, b) => a.kva - b.kva);
-  if (sortBy === 'price') list = list.slice().sort((a, b) => (a.price > 0 ? a.price : 1e15) - (b.price > 0 ? b.price : 1e15));
-  if (!list.length) return '<div class="empty"><strong>Bu oraliqda model yo‘q.</strong> <button type="button" class="btn btn-sm btn-o" data-act="filter" data-id="all">Hammasini ko‘rsatish</button></div>';
-  const pays = payOn();
-  const pm = pays.length ? '<span class="pm" role="img" aria-label="To‘lov: ' + esc(pays.map((x) => x.name).join(', ')) + '">' + pays.map((x) => '<span title="' + esc(x.name) + '">' + ic(x.icon, 16) + '</span>').join('') + '</span>' : '';
-  return list.map((p) => card(p, max, pm)).join('');
-};
-
-const catalog = () => {
-  const ps = byKva();
-  return '<section class="band soft" id="katalog"><div class="wrap"><div class="sec-h"><h2>Katalog: ' + ps.length + ' model' + (ps.length ? ', ' + num(ps[0].kva) + '–' + num(ps[ps.length - 1].kva) + ' kVA' : '') + '</h2><p>Kartochkani bosing: texnik ma’lumot, narx va buyurtma formasi bitta kartada ochiladi.</p></div>' +
-    '<div class="tools"><div class="chips" role="group" aria-label="Quvvat bo‘yicha saralash">' + FILTERS.map((f) => '<button type="button" class="chip-b" data-act="filter" data-id="' + f[0] + '" aria-pressed="' + (filt === f[0]) + '">' + f[1] + '</button>').join('') + '</div>' +
-    '<label class="sel" for="sort">Tartib<select id="sort" data-act-change="sort"><option value="order"' + (sortBy === 'order' ? ' selected' : '') + '>Tavsiya etilgan</option><option value="kva"' + (sortBy === 'kva' ? ' selected' : '') + '>Quvvat bo‘yicha</option><option value="price"' + (sortBy === 'price' ? ' selected' : '') + '>Narx bo‘yicha</option></select></label></div>' +
-    '<div class="pgrid" id="plist">' + cards() + '</div></div></section>';
+  return '<section class="band alt" id="buyurtma"><div class="wrap"><div class="sec-c rv"><h2 class="sec-t">Buyurtma 5 qadamda</h2><p class="sec-s">Ro‘yxatdan o‘tish shart emas. Hammasi bitta kartada.</p></div><ol class="flow">' +
+    steps.map((s, i) => '<li class="rv"><div class="fic">' + ic(s[0], 26) + '<b>' + (i + 1) + '</b></div><strong>' + s[1] + '</strong><span>' + esc(s[2]) + '</span></li>').join('') + '</ol></div></section>';
 };
 
 const side = (t) => {
   const pays = paysFor(t);
   const fields = t === 'fiz' ? ['Ism va familiya', 'Telefon raqami', 'Yetkazish manzili'] : ['Korxona nomi', 'STIR (INN)', 'Mas’ul shaxs', 'Telefon raqami', 'Hisob raqami va MFO', 'Manzil'];
-  return '<div class="side ' + t + '"><div class="side-h"><span class="ibig">' + ic(t === 'fiz' ? 'user' : 'org', 28) + '</span><div><h3>' + (t === 'fiz' ? 'Jismoniy shaxs' : 'Yuridik shaxs') + '</h3><p>' + (t === 'fiz' ? 'Xonadon, do‘kon egasi' : 'Korxona va tashkilotlar') + '</p></div></div>' +
+  return '<div class="side ' + t + ' rv"><div class="side-h"><span class="ibig">' + ic(t === 'fiz' ? 'user' : 'org', 28) + '</span><div><h3>' + (t === 'fiz' ? 'Jismoniy shaxs' : 'Yuridik shaxs') + '</h3><p>' + (t === 'fiz' ? 'Xonadon, do‘kon egasi' : 'Korxona va tashkilotlar') + '</p></div></div>' +
     '<div class="side-c"><div><h4>Kartada kiritiladi</h4><ul class="tags">' + fields.map((f) => '<li>' + f + '</li>').join('') + '</ul></div>' +
     '<div><h4>To‘lov usullari</h4>' + (pays.length ? '<ul class="plist">' + pays.map((x) => '<li><span class="pi">' + ic(x.icon) + '</span><span><strong>' + esc(x.name) + '</strong><small>' + esc(x.desc) + '</small></span></li>').join('') + '</ul>' : '<p class="fine">Menejer bilan kelishiladi</p>') + '</div></div></div>';
 };
 
-const payInfo = () => '<section class="band" id="tolov"><div class="wrap"><div class="sec-h"><h2>To‘lov: jismoniy va yuridik shaxslar uchun</h2><p>Kartada mijoz turini tanlaysiz, forma va to‘lov usullari o‘zi moslashadi. Karta raqami so‘ralmaydi: to‘lovni menejer tasdiqlaydi.</p></div><div class="split">' + side('fiz') + side('yur') + '</div></div></section>';
+const payInfo = () => '<section class="band" id="tolov"><div class="wrap"><div class="sec-c rv"><h2 class="sec-t">Jismoniy va yuridik shaxslar uchun</h2><p class="sec-s">Kartada mijoz turini tanlaysiz, forma va to‘lov usullari o‘zi moslashadi. Karta raqami so‘ralmaydi.</p></div><div class="split">' + side('fiz') + side('yur') + '</div></div></section>';
 
 const contact = () => {
   const st = S.settings;
   const ig = uname(st.instagram);
   const tg = uname(st.telegram);
   const m = blob(S.assets.machine);
-  return '<section class="band blue" id="aloqa"><div class="wrap ct"><div class="ct-l"><h2>Qaysi quvvat kerakligini bilmayapsizmi? Menejer hisoblab beradi</h2><p>' + esc(st.address) + '</p>' +
-    '<div class="ct-b"><a class="btn btn-y" href="tel:+' + phoneDigits() + '">' + ic('call') + esc(st.phone) + '</a>' +
-    (ig ? '<a class="btn btn-o" href="https://ig.me/m/' + ig + '">Instagram Direct</a>' : '') +
-    (tg ? '<a class="btn btn-o" href="https://t.me/' + tg + '">Telegram</a>' : '') + '</div></div>' +
-    (m ? '<img class="ct-img" src="' + m + '" alt="LIOX Power dizel generatori">' : '') + '</div></section>';
+  return '<section class="band cta" id="aloqa"><div class="wrap"><div class="sec-c rv" style="margin-bottom:0"><h2 class="sec-t">Qaysi quvvat kerakligini birga hisoblaymiz</h2><p class="sec-s">' + esc(st.address) + '</p>' +
+    '<div class="cta-b"><a class="btn btn-lg btn-w" href="tel:+' + phoneDigits() + '">' + ic('call', 20) + esc(st.phone) + '</a>' +
+    (ig ? '<a class="btn btn-lg btn-o" href="https://ig.me/m/' + ig + '">Instagram Direct</a>' : '') +
+    (tg ? '<a class="btn btn-lg btn-o" href="https://t.me/' + tg + '">Telegram</a>' : '') + '</div></div>' +
+    (m ? '<img class="cta-img rv" src="' + m + '" alt="LIOX Power dizel generatori" loading="lazy">' : '') + '</div></section>';
 };
 
 const footer = () => '<footer class="ftr"><div class="wrap"><span>© ' + new Date().getFullYear() + ' LIOX Power · Generator bozor</span><span>' + esc(S.settings.address) + ' · ' + esc(S.settings.phone) + '</span><button type="button" class="adm-link" data-act="admin">Admin panel</button></div></footer>';
 
 const app = document.getElementById('app');
 const render = () => {
-  app.innerHTML = hdr() + '<main>' + hero() + flow() + catalog() + payInfo() + contact() + '</main>' + footer() + '<div id="modal-root"></div><div id="admin-root"></div>';
+  app.innerHTML = hdr() + '<main>' + hero() + highlights() + story() + silent() + inside() + lineup() + reels() + flow() + payInfo() + contact() + '</main>' + footer() + '<div id="modal-root"></div><div id="admin-root"></div>';
   if (order) renderModal();
   if (adminOpen) renderAdmin();
+  initFx();
 };
 const renderCatalog = () => {
   const l = $('#plist');
-  if (l) l.innerHTML = cards();
+  if (l) { l.innerHTML = cards(); l.scrollLeft = 0; }
   document.querySelectorAll('.chip-b').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.id === filt)));
+};
+
+/* ---------- motion ---------- */
+let fxObs = [];
+let capIdx = 0;
+const RM = () => { try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; } };
+const countUp = (el) => {
+  const to = Number(el.dataset.to) || 0;
+  if (RM()) { el.textContent = String(to); return; }
+  const t0 = performance.now();
+  const step = (t) => { const k = Math.min(1, (t - t0) / 1300); el.textContent = String(Math.round(to * (1 - Math.pow(1 - k, 3)))); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+};
+const setStep = (i) => {
+  document.querySelectorAll('.ins-img').forEach((im) => im.classList.toggle('on', Number(im.dataset.i) === i));
+  document.querySelectorAll('.st-step').forEach((s) => s.classList.toggle('on', Number(s.dataset.step) === i));
+};
+const capTick = () => {
+  const v = $('#bo-v');
+  const c = $('#bo-cap');
+  if (!v || !c) return;
+  let i = 0;
+  CAPS.forEach((x, k) => { if (v.currentTime >= x[0]) i = k; });
+  if (i !== capIdx) { capIdx = i; c.classList.remove('show'); void c.offsetWidth; c.textContent = CAPS[i][1]; c.classList.add('show'); }
+};
+const vState = () => {
+  const v = $('#bo-v');
+  const b = $('#bo-btn');
+  if (!v || !b) return;
+  b.innerHTML = ic(v.paused ? 'play' : 'pause', 20);
+  b.setAttribute('aria-label', v.paused ? 'Videoni ijro etish' : 'Videoni to‘xtatish');
+};
+const playReel = (k) => {
+  document.querySelectorAll('video.reel').forEach((v) => { if (v.id !== 'rl-' + k) v.pause(); });
+  const v = document.getElementById('rl-' + k);
+  const b = document.querySelector('[data-act="reel"][data-id="' + k + '"]');
+  if (!v) return;
+  v.controls = true;
+  v.muted = false;
+  const pr = v.play();
+  if (pr && pr.catch) pr.catch(() => { });
+  if (b) b.hidden = true;
+};
+const onScroll = () => {
+  ticking = false;
+  if (RM()) return;
+  const p = Math.min(1, Math.max(0, window.scrollY / (window.innerHeight * 0.9)));
+  const img = document.getElementById('h-prod');
+  const tx = document.getElementById('hero-in');
+  if (img) img.style.transform = 'translate3d(0,' + (-p * 46).toFixed(1) + 'px,0) scale(' + (0.94 + p * 0.16).toFixed(3) + ')';
+  if (tx) { tx.style.opacity = String(Math.max(0, 1 - p * 1.5).toFixed(3)); tx.style.transform = 'translate3d(0,' + (-p * 36).toFixed(1) + 'px,0)'; }
+};
+let ticking = false;
+window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+const initFx = () => {
+  fxObs.forEach((o) => o.disconnect());
+  fxObs = [];
+  capIdx = 0;
+  const rm = RM();
+  const v = $('#bo-v');
+  if (v) { v.addEventListener('timeupdate', capTick); v.addEventListener('play', vState); v.addEventListener('pause', vState); }
+  if (!('IntersectionObserver' in window) || rm) {
+    document.querySelectorAll('.rv').forEach((el) => el.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('in'); e.target.querySelectorAll('.cnt').forEach(countUp); io.unobserve(e.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+  fxObs.push(io);
+  const so = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) setStep(Number(e.target.dataset.step)); }), { rootMargin: '-45% 0px -45% 0px' });
+  document.querySelectorAll('.st-step').forEach((el) => so.observe(el));
+  fxObs.push(so);
+  const vo = new IntersectionObserver((es) => es.forEach((e) => {
+    const el = e.target;
+    if (e.isIntersecting) { if (!el.dataset.user) { const pr = el.play(); if (pr && pr.catch) pr.catch(() => { }); } }
+    else { el.pause(); }
+  }), { threshold: 0.35 });
+  document.querySelectorAll('video.auto').forEach((el) => vo.observe(el));
+  fxObs.push(vo);
+  onScroll();
 };
 
 /* ---------- order card ---------- */
@@ -802,6 +979,9 @@ document.addEventListener('click', (e) => {
   if (a === 'ov' || a === 'adm-ov') { if (e.target !== t) return; }
   switch (a) {
     case 'open': openOrder(id); break;
+    case 'vtoggle': { const v = $('#bo-v'); if (v) { if (v.paused) { delete v.dataset.user; const pr = v.play(); if (pr && pr.catch) pr.catch(() => { }); } else { v.dataset.user = 'paused'; v.pause(); } } break; }
+    case 'reel': playReel(id); break;
+    case 'car': { const tr = $('#plist'); const c = tr && tr.querySelector('.pc'); if (tr) tr.scrollBy({ left: Number(id) * (c ? c.getBoundingClientRect().width + 20 : 320), behavior: RM() ? 'auto' : 'smooth' }); break; }
     case 'close': case 'ov': closeOrder(); break;
     case 'filter': filt = id; renderCatalog(); break;
     case 'otype': order.type = id; order.errs = {}; renderModal('t-' + id); break;

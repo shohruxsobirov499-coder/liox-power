@@ -2,7 +2,8 @@
   "v": 1,
   "assets": {
     "logo": "img/logo.png",
-    "machine": "img/hero.webp"
+    "machine": "img/hero.webp",
+    "hero": "img/hero-gen.webp"
   },
   "settings": {
     "phone": "+998 92 027 82 68",

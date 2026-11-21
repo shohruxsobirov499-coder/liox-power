@@ -1333,7 +1333,7 @@ document.addEventListener('input', (e) => {
     if (order.errs[t.dataset.f]) { delete order.errs[t.dataset.f]; t.removeAttribute('aria-invalid'); const er = document.getElementById('e-' + t.dataset.f); if (er) er.remove(); }
     return;
   }
-  if (t.dataset && t.dataset.gk) { ghSet(t.dataset.gk, t.dataset.gk === 'token' ? t.value.replace(/\s+/g, '') : t.value.trim()); return; }
+  if (t.dataset && t.dataset.gk) { ghSet(t.dataset.gk, t.dataset.gk === 'token' ? t.value.replace(/[^A-Za-z0-9_]/g, '') : t.value.trim()); return; }
   if (!adminOpen || !draft || !t.dataset) return;
   if (t.dataset.spk !== undefined || t.dataset.spv !== undefined) {
     const p = draft.products.find((x) => x.id === t.dataset.pid);

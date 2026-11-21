@@ -20,7 +20,8 @@
       "desc": "Yetkazib berilganda yoki ofisda",
       "who": "fiz",
       "icon": "cash",
-      "on": true
+      "on": true,
+      "logo": "img/pay-cash.png"
     },
     {
       "id": "card",
@@ -28,7 +29,8 @@
       "desc": "Uzcard yoki Humo, terminal orqali",
       "who": "all",
       "icon": "card",
-      "on": true
+      "on": true,
+      "logo": "img/pay-card.svg"
     },
     {
       "id": "click",
@@ -36,7 +38,8 @@
       "desc": "To‘lov ma’lumotini menejer yuboradi",
       "who": "fiz",
       "icon": "phone",
-      "on": true
+      "on": true,
+      "logo": "img/pay-click.png"
     },
     {
       "id": "payme",
@@ -44,7 +47,8 @@
       "desc": "To‘lov ma’lumotini menejer yuboradi",
       "who": "fiz",
       "icon": "wallet",
-      "on": true
+      "on": true,
+      "logo": "img/pay-payme.png"
     },
     {
       "id": "bank",
@@ -65,10 +69,34 @@
       "stock": "bor",
       "use": "Do‘kon, kafe, xonadon",
       "img": "img/m30.jpg",
-      "specs": "Chastota: 50 Hz\nKuchlanish: 400/230 V\nFazalar: 3\nOg‘irligi: 875 kg\nKorpus: Super Silent",
       "gallery": [
         "img/g30-1.jpg"
-      ]
+      ],
+      "specRows": [
+        [
+          "Chastota",
+          "50 Hz"
+        ],
+        [
+          "Kuchlanish",
+          "400/230 V"
+        ],
+        [
+          "Fazalar",
+          "3"
+        ],
+        [
+          "Og‘irligi",
+          "875 kg"
+        ],
+        [
+          "Korpus",
+          "Super Silent"
+        ]
+      ],
+      "desc": "",
+      "feats": "",
+      "video": ""
     },
     {
       "id": "p40",
@@ -79,7 +107,6 @@
       "stock": "bor",
       "use": "Katta do‘kon, ofis",
       "img": "img/m40-new.jpg",
-      "specs": "Chastota: 50 Hz\nKuchlanish: 400/230 V\nTok: 72 A\nAylanish: 1500 ayl/min\nFazalar: 3\nOg‘irligi: 915 kg\nKorpus: Super Silent",
       "gallery": [
         "img/g40-1.jpg",
         "img/g40-2.jpg",
@@ -87,7 +114,40 @@
         "img/g40-4.jpg",
         "img/g40-5.jpg",
         "img/m40.jpg"
-      ]
+      ],
+      "specRows": [
+        [
+          "Chastota",
+          "50 Hz"
+        ],
+        [
+          "Kuchlanish",
+          "400/230 V"
+        ],
+        [
+          "Tok",
+          "72 A"
+        ],
+        [
+          "Aylanish",
+          "1500 ayl/min"
+        ],
+        [
+          "Fazalar",
+          "3"
+        ],
+        [
+          "Og‘irligi",
+          "915 kg"
+        ],
+        [
+          "Korpus",
+          "Super Silent"
+        ]
+      ],
+      "desc": "",
+      "feats": "Super Silent korpus\nATS bilan avtomatik ishga tushish\nRaqamli boshqaruv paneli\nCE va ISO 9001",
+      "video": ""
     },
     {
       "id": "p50",
@@ -98,10 +158,18 @@
       "stock": "bor",
       "use": "Restoran, kichik ishlab chiqarish",
       "img": "img/m50.jpg",
-      "specs": "Korpus: shovqin pasaytiruvchi",
       "gallery": [
         "img/g50-1.jpg"
-      ]
+      ],
+      "specRows": [
+        [
+          "Korpus",
+          "shovqin pasaytiruvchi"
+        ]
+      ],
+      "desc": "",
+      "feats": "",
+      "video": ""
     },
     {
       "id": "p100",
@@ -115,7 +183,15 @@
       "gallery": [
         "img/g100-2.jpg"
       ],
-      "specs": "Korpus: shovqin pasaytiruvchi"
+      "specRows": [
+        [
+          "Korpus",
+          "shovqin pasaytiruvchi"
+        ]
+      ],
+      "desc": "",
+      "feats": "",
+      "video": ""
     },
     {
       "id": "p150",
@@ -126,10 +202,18 @@
       "stock": "bor",
       "use": "Sex, savdo markazi",
       "img": "img/m150.jpg",
-      "specs": "Korpus: shovqin pasaytiruvchi",
       "gallery": [
         "img/g150-1.jpg"
-      ]
+      ],
+      "specRows": [
+        [
+          "Korpus",
+          "shovqin pasaytiruvchi"
+        ]
+      ],
+      "desc": "",
+      "feats": "",
+      "video": ""
     },
     {
       "id": "p200",
@@ -140,10 +224,18 @@
       "stock": "bor",
       "use": "Zavod, qurilish maydoni",
       "img": "img/m200.jpg",
-      "specs": "Korpus: shovqin pasaytiruvchi",
       "gallery": [
         "img/g200-1.jpg"
-      ]
+      ],
+      "specRows": [
+        [
+          "Korpus",
+          "shovqin pasaytiruvchi"
+        ]
+      ],
+      "desc": "",
+      "feats": "",
+      "video": ""
     },
     {
       "id": "p300",
@@ -154,13 +246,21 @@
       "stock": "bor",
       "use": "Yirik korxona, ombor",
       "img": "img/m300-new.jpg",
-      "specs": "Korpus: shovqin pasaytiruvchi",
       "gallery": [
         "img/g300-1.jpg",
         "img/g300-2.jpg",
         "img/g300-3.jpg",
         "img/m300.jpg"
-      ]
+      ],
+      "specRows": [
+        [
+          "Korpus",
+          "shovqin pasaytiruvchi"
+        ]
+      ],
+      "desc": "",
+      "feats": "",
+      "video": ""
     }
   ]
 }

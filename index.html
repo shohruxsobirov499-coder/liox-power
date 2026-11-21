@@ -387,6 +387,40 @@ details summary{cursor:pointer;font-weight:700;min-height:32px}
 @media(max-width:760px){.ov{padding:0}.dlg{grid-template-columns:minmax(0,1fr);border-radius:0;max-height:100%;height:100%}.dl-l .ph{aspect-ratio:auto;height:220px}.dl-r{padding:20px 16px 28px}.dl-l{padding:16px;padding-top:64px}}
 @media(max-width:600px){.hdr-tel span{display:none}.kc-xl i{display:none}.logo img{height:28px}.co-lab small{display:none}.co-lab{padding:6px 8px}.ats-d{grid-template-rows:auto 44px auto;padding:16px 10px}.nd b{font-size:13px}.ln{margin-bottom:24px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.ring .fg{stroke-dashoffset:0}}
+
+/* customer-type panels: whole panel is clickable */
+.side{position:relative;transition:box-shadow .2s,transform .2s}
+.side:hover{box-shadow:0 10px 30px rgba(14,31,122,.14);transform:translateY(-2px)}
+.side-go{justify-self:start;gap:8px}
+.side-go::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.side.yur .side-go{background:var(--nv,#0E1F7A)}
+.kc-col{cursor:pointer}
+.pick-note{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:60;background:#0E1F7A;color:#fff;padding:12px 18px;border-radius:14px;font-weight:700;font-size:15px;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:calc(100% - 32px);text-align:center}
+@media (prefers-reduced-motion:reduce){.side,.side:hover{transition:none;transform:none}}
+/* whole product card opens the order card */
+.pc{cursor:pointer}
+/* model chooser */
+.dlg.pick{display:block;max-width:660px;padding:30px}
+.pk-eb{display:flex;align-items:center;gap:8px;margin:0 52px 6px 0}
+.pk-s{margin:-8px 0 16px;color:var(--mute,#5b6478)}
+.pk-l{display:grid;gap:10px}
+.pk-i{display:grid;grid-template-columns:84px 1fr auto;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:1px solid var(--line,#e3e7f0);border-radius:16px;padding:8px 14px 8px 8px;cursor:pointer;font:inherit;color:inherit;transition:border-color .2s,box-shadow .2s}
+.pk-i:hover,.pk-i:focus-visible{border-color:#F26A1B;box-shadow:0 8px 22px -12px rgba(242,106,27,.55)}
+.pk-ph{width:84px;height:64px;border-radius:12px;overflow:hidden;background:var(--alt,#F4F6FB);display:block}
+.pk-ph img,.pk-ph svg{width:100%;height:100%;object-fit:cover;display:block}
+.pk-b{display:flex;flex-direction:column;gap:2px;min-width:0}
+.pk-b strong{font-size:22px;color:#0E1F7A}
+.pk-b small{color:var(--mute,#5b6478)}
+.pk-i>svg{color:#F26A1B}
+@media (max-width:520px){.dlg.pick{padding:22px 16px}.pk-i{grid-template-columns:64px 1fr auto}.pk-ph{width:64px;height:52px}}
+/* card transfer box in the order card */
+.cardpay{margin:0 0 16px;padding:16px;border-radius:16px;background:linear-gradient(135deg,#0E1F7A,#0A1658);color:#fff;display:grid;gap:8px}
+.cp-h{display:flex;align-items:center;gap:8px;font-weight:700}
+.cp-n{font-size:24px;letter-spacing:.06em}
+.cp-o{opacity:.85}
+.cardpay .btn-o{justify-self:start;background:#fff;color:#0E1F7A;border-color:#fff;gap:6px}
+.cardpay .fine{color:rgba(255,255,255,.8);margin:0}
+.cp-msg{font-weight:700;color:#FFB27A;min-height:1em}
 </style>
 </head>
 <body>
@@ -698,14 +732,44 @@ const flow = () => {
     steps.map((s, i) => '<li class="rv"><div class="fic">' + ic(s[0], 26) + '<b>' + (i + 1) + '</b></div><strong>' + s[1] + '</strong><span>' + esc(s[2]) + '</span></li>').join('') + '</ol></div></section>';
 };
 
+let prefType = '';
 const side = (t) => {
   const pays = paysFor(t);
   const fields = t === 'fiz' ? ['Ism va familiya', 'Telefon raqami', 'Yetkazish manzili'] : ['Korxona nomi', 'STIR (INN)', 'Mas’ul shaxs', 'Telefon raqami', 'Hisob raqami va MFO', 'Manzil'];
   return '<div class="side ' + t + ' rv"><div class="side-h"><span class="ibig">' + ic(t === 'fiz' ? 'user' : 'org', 28) + '</span><div><h3>' + (t === 'fiz' ? 'Jismoniy shaxs' : 'Yuridik shaxs') + '</h3><p>' + (t === 'fiz' ? 'Xonadon, do‘kon egasi' : 'Korxona va tashkilotlar') + '</p></div></div>' +
-    '<div class="side-c"><div><h4>Kartada kiritiladi</h4><ul class="tags">' + fields.map((f) => '<li>' + f + '</li>').join('') + '</ul></div>' +
-    '<div><h4>To‘lov usullari</h4>' + (pays.length ? '<ul class="plist">' + pays.map((x) => '<li><span class="pi' + (blob(x.logo) ? ' lg' : '') + '">' + payIcon(x) + '</span><span><strong>' + esc(x.name) + '</strong><small>' + esc(x.desc) + '</small></span></li>').join('') + '</ul>' : '<p class="fine">Menejer bilan kelishiladi</p>') + '</div></div></div>';
+    '<div class="side-c"><div><h4>Buyurtmada so‘raladi</h4><ul class="tags">' + fields.map((f) => '<li>' + f + '</li>').join('') + '</ul></div>' +
+    '<div><h4>To‘lov usullari</h4>' + (pays.length ? '<ul class="plist">' + pays.map((x) => '<li><span class="pi' + (blob(x.logo) ? ' lg' : '') + '">' + payIcon(x) + '</span><span><strong>' + esc(x.name) + '</strong><small>' + esc(x.desc) + '</small></span></li>').join('') + '</ul>' : '<p class="fine">Menejer bilan kelishiladi</p>') + '</div>' +
+    '<button type="button" class="btn btn-or side-go" data-act="pick-type" data-id="' + t + '">' + (t === 'fiz' ? 'Jismoniy shaxs sifatida buyurtma' : 'Yuridik shaxs sifatida buyurtma') + ic('right', 18) + '</button></div></div>';
 };
-const payInfo = () => '<section class="band" id="tolov"><div class="wrap"><div class="sec-c rv"><p class="eb">To‘lov</p><h2 class="sec-t">Jismoniy va yuridik shaxslar uchun</h2><p class="sec-s">Kartada mijoz turini tanlaysiz, forma va to‘lov usullari o‘zi moslashadi. Karta raqami so‘ralmaydi.</p></div><div class="split">' + side('fiz') + side('yur') + '</div></div></section>';
+const payInfo = () => '<section class="band" id="tolov"><div class="wrap"><div class="sec-c rv"><p class="eb">To‘lov</p><h2 class="sec-t">Jismoniy va yuridik shaxslar uchun</h2><p class="sec-s">Mijoz turini bosing va generatorni tanlang. Buyurtma formasi va to‘lov usullari shu turga moslashadi.</p></div><div class="split">' + side('fiz') + side('yur') + '</div></div></section>';
+
+/* model chooser: opened from the Jismoniy / Yuridik panels */
+let picking = false;
+const pickView = (t) => '<div class="ov" data-act="ov"><div class="dlg pick" role="dialog" aria-modal="true" aria-labelledby="pk-t">' +
+  '<button type="button" class="icon-btn dlg-x" id="dlg-x" data-act="close" aria-label="Yopish">' + ic('x') + '</button>' +
+  '<p class="eb pk-eb">' + ic(t === 'yur' ? 'org' : 'user', 18) + (t === 'yur' ? 'Yuridik shaxs' : 'Jismoniy shaxs') + '</p>' +
+  '<h2 class="dlg-title" id="pk-t">Generatorni tanlang</h2><p class="pk-s">Tanlaganingizdan keyin buyurtma kartasi ochiladi.</p><div class="pk-l">' +
+  byKva().map((p) => '<button type="button" class="pk-i" data-act="pick-model" data-id="' + esc(p.id) + '"><span class="pk-ph">' + picOf(p) + '</span>' +
+    '<span class="pk-b"><strong class="disp">' + num(kwOf(p)) + ' KW</strong><span>' + esc(p.name) + '</span><small>' + (p.price > 0 ? money(p.price) : 'Narxi so‘rov bo‘yicha') + (stockTxt[p.stock] ? ' · ' + stockTxt[p.stock] : '') + '</small></span>' + ic('right', 20) + '</button>').join('') +
+  '</div></div></div>';
+const openPick = (t) => {
+  prefType = t;
+  lastFocus = document.activeElement;
+  picking = true;
+  const r = $('#modal-root');
+  if (!r) return;
+  r.innerHTML = pickView(t);
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => { const c = $('#dlg-x'); if (c) c.focus(); }, 0);
+};
+
+/* bank card for transfers, set in admin → Sozlamalar */
+const cardNo = () => digits(S.settings.card).length >= 16 ? digits(S.settings.card) : '';
+const fmtCard = (d) => d.replace(/(\d{4})(?=\d)/g, '$1 ');
+const cardBox = (after) => !cardNo() ? '' : '<div class="cardpay"><div class="cp-h">' + ic('card', 20) + 'Karta orqali to‘lov</div>' +
+  '<div class="cp-n disp" id="cp-n">' + fmtCard(cardNo()) + '</div>' + (S.settings.cardOwner ? '<div class="cp-o">Karta egasi: ' + esc(S.settings.cardOwner) + '</div>' : '') +
+  '<button type="button" class="btn btn-sm btn-o" data-act="copy-card">' + ic('copy', 16) + 'Karta raqamini nusxalash</button><span class="cp-msg" id="cp-msg" role="status"></span>' +
+  '<p class="fine">' + (after ? 'Menejer narx va mavjudlikni tasdiqlagach, shu kartaga o‘tkazing va chekni yuboring.' : 'Buyurtmani yuborganingizdan keyin menejer narxni tasdiqlaydi, so‘ng shu kartaga o‘tkazasiz.') + '</p></div>';
 
 const contact = () => {
   const st = S.settings;
@@ -871,13 +935,14 @@ const prodOf = (id) => S.products.find((p) => p.id === id);
 const openOrder = (id) => {
   if (!prodOf(id)) return;
   lastFocus = document.activeElement;
-  order = { pid: id, gi: 0, type: 'fiz', qty: 1, del: 'deliver', pay: '', f: {}, errs: {}, done: null };
+  order = { pid: id, gi: 0, type: prefType || 'fiz', qty: 1, del: 'deliver', pay: '', f: {}, errs: {}, done: null };
   renderModal();
   document.body.style.overflow = 'hidden';
   setTimeout(() => { const c = $('#dlg-x'); if (c) c.focus(); }, 0);
 };
 const closeOrder = () => {
   order = null;
+  picking = false;
   const r = $('#modal-root');
   if (r) r.innerHTML = '';
   document.body.style.overflow = adminOpen ? 'hidden' : '';
@@ -919,7 +984,7 @@ const formView = (p) => {
     '<fieldset class="fs" style="margin:0"><legend>Yetkazish</legend><div class="opts">' +
     '<label class="pay"><input type="radio" name="del" value="deliver" id="d-deliver"' + (dl ? ' checked' : '') + '><span><strong>Yetkazib berish</strong><small>' + esc(S.settings.delivery || '') + '</small></span></label>' +
     '<label class="pay"><input type="radio" name="del" value="pickup" id="d-pickup"' + (!dl ? ' checked' : '') + '><span><strong>O‘zim olib ketaman</strong><small>' + esc(S.settings.address || '') + '</small></span></label></div></fieldset></div>' +
-    '<fieldset class="fs"><legend>To‘lov turi</legend>' + (pays.length ? '<div class="opts">' + pays.map((x) => '<label class="pay"><input type="radio" name="pay" value="' + esc(x.id) + '" id="p-' + esc(x.id) + '"' + (order.pay === x.id ? ' checked' : '') + '><span class="pi' + (blob(x.logo) ? ' lg' : '') + '">' + payIcon(x) + '</span><span><strong>' + esc(x.name) + '</strong><small>' + esc(x.desc) + '</small></span></label>').join('') + '</div>' : '<p class="fine">To‘lov turi menejer bilan kelishiladi.</p>') + (order.errs.pay ? '<div class="err">' + order.errs.pay + '</div>' : '') + '</fieldset>' +
+    '<fieldset class="fs"><legend>To‘lov turi</legend>' + (pays.length ? '<div class="opts">' + pays.map((x) => '<label class="pay"><input type="radio" name="pay" value="' + esc(x.id) + '" id="p-' + esc(x.id) + '"' + (order.pay === x.id ? ' checked' : '') + '><span class="pi' + (blob(x.logo) ? ' lg' : '') + '">' + payIcon(x) + '</span><span><strong>' + esc(x.name) + '</strong><small>' + esc(x.desc) + '</small></span></label>').join('') + '</div>' : '<p class="fine">To‘lov turi menejer bilan kelishiladi.</p>') + (order.errs.pay ? '<div class="err">' + order.errs.pay + '</div>' : '') + '</fieldset>' + (order.pay === 'card' ? cardBox(false) : '') +
     '<div class="fld" style="margin-bottom:12px"><label for="f-note">Izoh</label><textarea id="f-note" data-f="note" rows="3" placeholder="Masalan: qaysi uskunalarni ulamoqchisiz, qachon kerak">' + esc(order.f.note || '') + '</textarea></div>' +
     '<div class="sum"><span>Jami' + (p.price > 0 ? ' (' + order.qty + ' dona)' : '') + '</span><strong class="disp">' + total + '</strong></div>' +
     '<button type="submit" class="btn btn-b big">Buyurtmani tasdiqlash</button><p class="fine">Tasdiqlagach buyurtma matni tayyor bo‘ladi va uni sotuvchiga bir bosishda yuborasiz. Karta raqamingiz so‘ralmaydi.</p></form>';
@@ -949,7 +1014,7 @@ const doneView = (p) => {
   const ig = uname(st.instagram);
   const pd = phoneDigits();
   return '<div class="ok"><span class="okic">' + ic('check', 28) + '</span><h2 class="dlg-title" id="dlg-t" style="margin-bottom:0">Buyurtma ' + esc(d.no) + ' tayyor</h2>' +
-    '<p style="margin:0">Endi uni sotuvchiga yuboring. Menejer siz bilan bog‘lanib narx, to‘lov va yetkazishni tasdiqlaydi.</p>' +
+    '<p style="margin:0">Endi uni sotuvchiga yuboring. Menejer siz bilan bog‘lanib narx, to‘lov va yetkazishni tasdiqlaydi.</p>' + (order.pay === 'card' ? cardBox(true) : '') +
     '<div class="send">' +
     (st.whatsapp && pd ? '<a class="btn btn-b" href="https://wa.me/' + pd + '?text=' + encodeURIComponent(d.text) + '" target="_blank" rel="noopener">' + ic('send', 18) + 'WhatsApp’da yuborish</a>' : '') +
     (tg ? '<a class="btn btn-b" href="https://t.me/' + tg + '" target="_blank" rel="noopener" data-act="copy">' + ic('send', 18) + 'Nusxalab Telegram’ni ochish</a>' : '') +
@@ -1104,6 +1169,8 @@ const tabSet = () => {
     af('instagram', 'Instagram username', s.instagram, { kind: 'sk' }) +
     af('delivery', 'Yetkazish sharti (qisqa)', s.delivery, { kind: 'sk' }) +
     af('address', 'Manzil', s.address, { kind: 'sk', wide: true }) +
+    af('card', 'To‘lov uchun karta raqami (Uzcard / Humo)', s.card || '', { kind: 'sk', im: 'numeric', ph: '8600 0000 0000 0000', hint: 'Yozsangiz, mijoz “Plastik karta”ni tanlaganda shu raqam nusxalash tugmasi bilan chiqadi. Bo‘sh qolsa, karta faqat terminal orqali.' }) +
+    af('cardOwner', 'Karta egasi (ism familiya)', s.cardOwner || '', { kind: 'sk', ph: 'Masalan: Shohrux S.' }) +
     '<label class="chk wide" style="grid-column:1/-1"><input type="checkbox" data-sk="whatsapp"' + (s.whatsapp ? ' checked' : '') + '>Shu telefon raqamida WhatsApp bor (buyurtma WhatsApp’ga tayyor matn bilan yuboriladi)</label></div>' + ghBlock();
 };
 
@@ -1282,7 +1349,7 @@ const dlJson = () => {
 
 /* ---------- events ---------- */
 document.addEventListener('click', (e) => {
-  const t = e.target.closest('[data-act]');
+  const t = e.target.closest('[data-act]') || (() => { const h = e.target.closest && e.target.closest('.kc-col, article.pc, #tolov .side'); return h ? h.querySelector('[data-act]') : null; })();
   if (!t) return;
   const a = t.dataset.act;
   const id = t.dataset.id;
@@ -1291,6 +1358,9 @@ document.addEventListener('click', (e) => {
     case 'open': openOrder(id); break;
     case 'vtoggle': { const v = $('#bo-v'); if (v) { if (v.paused) { delete v.dataset.user; const pr = v.play(); if (pr && pr.catch) pr.catch(() => { }); } else { v.dataset.user = 'paused'; v.pause(); } } break; }
     case 'reel': playReel(id); break;
+    case 'pick-type': openPick(id); break;
+    case 'pick-model': { const lf = lastFocus; picking = false; openOrder(id); lastFocus = lf; break; }
+    case 'copy-card': { const m = $('#cp-msg'); const ok = () => { if (m) m.textContent = 'Nusxalandi'; }; const fb = () => { const n = $('#cp-n'); if (n) { const rg = document.createRange(); rg.selectNodeContents(n); const sl = window.getSelection(); sl.removeAllRanges(); sl.addRange(rg); } if (m) m.textContent = 'Raqam belgilandi, nusxalang'; }; try { navigator.clipboard.writeText(cardNo()).then(ok, fb); } catch (er) { fb(); } break; }
     case 'ats': atsSet(Number(id)); atsPP(true); break;
     case 'atspp': atsPP(!atsPaused); break;
     case 'sp-add': { const p = draft.products.find((x) => x.id === id); if (p) { if (!Array.isArray(p.specRows)) p.specRows = specRows(p).map((r) => r.slice()); p.specRows.push(['', '']); delete p.specs; changed(); renderAdmin('[data-spk="' + (p.specRows.length - 1) + '"][data-pid="' + p.id + '"]'); } break; }
@@ -1366,7 +1436,7 @@ document.addEventListener('input', (e) => {
 document.addEventListener('change', (e) => {
   const t = e.target;
   if (t.id === 'sort') { sortBy = t.value; renderCatalog(); return; }
-  if (order && t.name === 'pay') { order.pay = t.value; if (order.errs.pay) { delete order.errs.pay; renderModal(t.id); } return; }
+  if (order && t.name === 'pay') { order.pay = t.value; delete order.errs.pay; renderModal(t.id); return; }
   if (order && t.name === 'del') { order.del = t.value; delete order.errs.addr; renderModal(t.id); return; }
   if (t.dataset && t.dataset.upv) { uploadVideo(t.dataset.upv, t.files && t.files[0]); return; }
   if (t.dataset && t.dataset.uplogo) { uploadLogo(t.dataset.uplogo, t.files && t.files[0]); return; }
@@ -1382,9 +1452,9 @@ document.addEventListener('submit', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  const box = order ? $('.dlg') : adminOpen ? $('.adm-p') : null;
+  const box = (order || picking) ? $('.dlg') : adminOpen ? $('.adm-p') : null;
   if (!box) return;
-  if (e.key === 'Escape') { e.preventDefault(); if (order) closeOrder(); else closeAdmin(); return; }
+  if (e.key === 'Escape') { e.preventDefault(); if (order || picking) closeOrder(); else closeAdmin(); return; }
   if (e.key === 'Tab') {
     const f = Array.from(box.querySelectorAll('a[href],button:not(:disabled),input,select,textarea,summary,[tabindex="0"]')).filter((el) => el.offsetParent !== null);
     if (!f.length) return;
